@@ -1,1 +1,47 @@
-module.exports = {};
+module.exports = {
+	'colors' : {
+		'valhalla' : '#282A40',
+		'meadow' : '#11B1A9',
+		'bittersweet' : '#FA7555',
+		'spindle' : '#BCE5EE',
+		'purple' : '#6667AB',
+		'greylighter' : '#E6E6E6',
+	},
+	'primary': 'colors(meadow)',
+	'secondary': 'colors(bittersweet)',
+	'radius': '15px',
+	'body': {
+		'background': 'colors(white)',
+		'block-background': 'colors(white)',
+		'font-color': 'colors(valhalla)',
+		'font-size'		: '24px',
+		'font-size-sm'	: '22px',
+		'font-size-xxs'	: '20px',
+		'line-height' 	: '1.45',
+	},
+	'header': {
+		'background': 'colors(none)',
+		// 'font-color': 'body(font-color)',
+		'font-size': '0.8em',
+	},
+	'footer': {
+		'background': 'colors(valhalla)',
+		'font-color': 'colors(white)',
+		'font-size': '0.8em',
+	},
+	'link': {
+		'font-color': 'body(font-color)',
+		'font-color-hover': 'primary',
+		'font-color-focus': 'primary',
+		'underline': true,
+		'underline-on-hover': true,
+	},
+	'btn':{
+		'background': 'colors(valhalla)',
+		'font-color': 'contrastFW(colors(white),colors(valhalla))',
+		'border-size': '2px',
+		'radius': false,
+		'uppercase': false,
+		'font-weight': 400,
+	},
+};
