@@ -4,7 +4,15 @@
 
 body{@extend .ft-futura;}
 .container{
+	@include media-min(xs){max-width: 540px;}
+	@include media-min(sm){max-width: 720px;}
+	@include media-min(md){max-width: 960px;}
+	@include media-min(lg){max-width: 1140px;}
 	@include media-min(xl){max-width: 1680px;}
+}
+h1,.h1{@extend .ft-playfair; text-transform: none; font-weight: bold;}
+.heroFW[class*="title--"]{
+	h1,.h1{font-weight: bold;}
 }
 
 
@@ -53,6 +61,7 @@ body{@extend .ft-futura;}
 	a{color:inherit; text-decoration: none;
 		&:hover{color:link(font-color-hover);}
 	}
+	.mod_customnav ul{margin-bottom: 0;}
 }
 .footer__item{@extend .p-y; display: flex; flex-wrap: wrap; align-items: center;
 	+.footer__item{border-top: 1px solid rgba(footer(font-color),0.2);}
@@ -137,7 +146,12 @@ ol, p, ul{margin-bottom: 0.65em;}
 
 .mod_article{margin-bottom: $spacing*2; padding: $spacing*2 0;
   @include media-max(xs){margin-bottom: $spacing;padding: $spacing 0;}
+  >.heroFW:first-child{margin-top: - $spacing*2;
+  	@include media-max(xs){margin-top: -$spacing;}
+  }
 }
+
+.heroFW__content .heroFW__content__wrapper{@extend .container !optional; width: 100%; margin-left: auto; margin-right: auto; }
 
 .btn-icon{
 	padding: .6em .65em .65em; line-height: 1em; background: none; color: btn(background); vertical-align: middle; text-align: center;display: inline-block; margin-top: 2.5px;margin-bottom: 2.5px;
@@ -147,6 +161,8 @@ ol, p, ul{margin-bottom: 0.65em;}
 .btn{
 	i[class*=long-arrow]{margin-top: 0.25em !important;}
 }
+i[class*=long-arrow]{vertical-align: text-bottom;}
+
 .icon-last,.icon-first{
 	padding-left: 1.5em !important; 
 	padding-right: 1.5em !important; 
@@ -158,6 +174,19 @@ ol, p, ul{margin-bottom: 0.65em;}
 	h1,h2,h3,h4,h5,h6{}
 	p{font-size: 1rem;line-height: body(line-height);
 		&+p{margin-top: 1em;}
+	}
+}
+
+// BREADCRUMB
+$breadcrumb--height: 3rem;
+.mod_breadcrumb{ height: $breadcrumb--height; z-index: 1; position: relative;
+	.container &.container{padding: 0;} 
+	ul{line-height: $breadcrumb--height;}
+	+.mod_article{
+		&:not(.p-top-0)>.heroFW:first-child{margin-top: -$spacing*2 - $breadcrumb--height;
+  		@include media-max(xs){margin-top: -$spacing - $breadcrumb--height;}
+		}
+		&.p-top-0>.heroFW:first-child{margin-top: -$breadcrumb--height;}
 	}
 }
 
