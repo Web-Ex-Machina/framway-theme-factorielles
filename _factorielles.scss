@@ -17,6 +17,8 @@ h2,.h2{font-size: 2.65rem;}
 }
 
 // MEP
+*:where([class*='bg-']:not([class*='bg--']):not([class*='btn-'])){padding: $spacing*0.65 $spacing;}
+
 @for $index from 1 through 6{
   h#{$index},
   .h#{$index}{
@@ -233,9 +235,11 @@ body.home{
 // BREADCRUMB
 $breadcrumb--height: 3rem;
 .mod_breadcrumb{ height: $breadcrumb--height; z-index: 1; position: relative;
-	.container &.container{padding: 0;} 
+	.container &.container{padding: 0;
+		@include media-max(md){max-width: none;}
+	} 
 	ul{line-height: $breadcrumb--height;
-		li.root{min-width: 0;}
+		li.root{min-width: 0; flex-shrink: 0;}
 	}
 	+.mod_article{
 		&:not(.p-top-0)>.heroFW:first-child,
@@ -377,3 +381,27 @@ $heightMain : 1.85em;
 .priceCard__cta{ font-size: 1.2em;		
 	a{width: 100%;}
 }
+
+
+// CTA
+.ce_cta{@extend .m-bottom !optional; padding: $spacing;  line-height: 1; 
+	>a{text-decoration: none; color: inherit;}
+}
+.ce_rsce_cta_mini{background: $primary; color: contrastFW(body(background),$primary);border-bottom: 5px solid $secondary; font-size: 0.8rem;
+	@for $index from 1 through 3{
+	  &:nth-of-type(#{$index}n)+.ce_rsce_cta_mini{background: lighten($primary,(($index*10)*0.5)); }
+	}
+	&+.ce_rsce_cta_mini{border-bottom-color: $tertiary;
+		&+.ce_rsce_cta_mini{border-bottom-color: color(spindle);
+			&+.ce_rsce_cta_mini{border-bottom-color: color(purple);}
+		}
+	}
+}
+
+.cta__icon{margin-right: $spacing; font-size: 1.8em; line-height: 1;}
+.cta__content{
+	.ce_text{@include lastChildNoMargin();}
+}
+
+// isotope
+.mod_iso_orderhistory .table td, .mod_iso_orderhistory .table th{vertical-align:middle}
