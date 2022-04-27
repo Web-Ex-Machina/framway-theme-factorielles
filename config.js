@@ -18,8 +18,10 @@ module.exports = {
 		'block-background': 'colors(white)',
 		'font-color': 'primary',
 		'font-size'		: '24px',
-		'font-size-sm'	: '22px',
-		'font-size-xxs'	: '20px',
+		'font-size-lg'	: '22px',
+		'font-size-md'	: '20px',
+		'font-size-sm'	: '18px',
+		'font-size-xxs'	: '16px',
 		'line-height' 	: '1.45',
 	},
 	'header': {
