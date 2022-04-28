@@ -8,6 +8,9 @@ $(function(){
         $(this).closest('form').find('.button_update').trigger('click');
     });
 
+    $('.ce_rsce_cta_mini .cta__toggler').on('click', function(e){
+        $(this).next('.cta__content').slideToggle();
+    });
     
 	init();
 });
