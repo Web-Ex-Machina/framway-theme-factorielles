@@ -29,11 +29,17 @@ h2,.h2{font-size: 2.65rem;}
 ol, p, ul{margin-bottom: 0.65em;}
 
 .mod_article{ padding: $spacing*2 0;
+	// @extend .txt-limit;
   @include media-max(xs){ padding: $spacing 0;}
-  >.heroFW:first-child{margin-top: - $spacing*2; margin-bottom: - $spacing*2;
-  	@include media-max(xs){margin-top: -$spacing; margin-bottom: -$spacing;}
+  >.heroFW:first-child{margin-top: - $spacing*2; 
+  	@include media-max(xs){margin-top: -$spacing;}
+  }
+  >.heroFW:last-child{margin-bottom: - $spacing*2;
+  	@include media-max(xs){ margin-bottom: -$spacing;}
   }
 }
+
+.accordionFW__content__wrapper{@extend .no-txt-limit,.clear-after;}
 
 .heroFW__content .heroFW__content__wrapper{@extend .container !optional; width: 100%; margin-left: auto; margin-right: auto; padding-left: var(--bs-gutter-x,.75rem); padding-right: var(--bs-gutter-x,.75rem);
 	@include media-max(xs){padding: 0;}
@@ -73,6 +79,12 @@ i[class*=long-arrow]{vertical-align: text-bottom;}
 		&[class*=--#{$key}]:first-letter{text-decoration-color: $value;}
 	}
 }	
+%title--sep{
+	position: relative;
+	&:after{content:"";display: block; height: 5px; width: 30%; background: currentColor; max-width: 120px; margin: 0.35em 0 0;}
+}
+.ce_headline[class*="sep-bot-"],
+.title--sep{@extend %title--sep;}
 
 
 #logo{object-fit: contain;}
@@ -222,8 +234,9 @@ body.home{
 		@include media-max(xxs){padding-right: 1.5em;padding-left: 1.5em;}
 	}
 	.title--compound{@include media-max(md){margin: auto;}}
-	.home__notreecosysteme__media{position: absolute; top: 50%;right: 0;transform: translate(0%,-50%); @extend %img-container,.r_16-9 !optional;
-		figure{@extend %img-container,.r_16-9 !optional;}
+	.home__notreecosysteme__media{position: absolute; top: 50%;right: 0;transform: translate(0%,-50%); 
+		// @extend %img-container,.r_16-9 !optional;
+		// figure{@extend %img-container,.r_16-9 !optional;}
 		width: 50vw;
 		@include media-max(md){position: relative; width: 110vw; left: 50%; top: 0;transform: translateX(-50%);}
 	}
@@ -309,7 +322,7 @@ $breadcrumb--height: 3rem;
 
 // LIST ICONS
 .ce_rsce_listIcons{ margin-bottom: $spacing;
-  & .block-icon{text-align: center; 
+  & .block-icon{text-align: center; @extend .no-txt-limit;
   	&[class*=bg-][class*=-o-]{ position: relative;
   		&:before{@include pseudo(); top: 0; left: 0;width: 100%; height: 100%; background: body(block-background); z-index: -1;}
   	}
@@ -328,7 +341,7 @@ $breadcrumb--height: 3rem;
   	.block-icon{
   		@for $index from 1 through 12{
 	      &:nth-of-type(#{$index}n){
-	        & .block-icon__figure:before{content: "#{$index}"; display: inline-block; background: $tertiary; color:white; font-size: 0.45em; width: 1.65em; height: 1.65em; line-height: 1.65em; margin: 0 0.75em 0 0; font-weight: 300;}
+	        & .block-icon__figure:before{content: "#{$index}"; display: inline-block; background: $tertiary; color:white; font-size: 0.45em; width: 1.65em; height: 1.65em; line-height: 1.65em; margin: 0 0.75em 0 0; font-weight: 300; flex-shrink: 0;}
 	      }
 	    }
   	}
@@ -384,24 +397,35 @@ $heightMain : 1.85em;
 
 
 // CTA
-.ce_cta{@extend .m-bottom !optional; padding: $spacing;  line-height: 1; 
+.ce_cta{@extend .m-bottom !optional; padding: 1em 1.5em;  line-height: 1; 
 	>a{text-decoration: none; color: inherit;}
 }
-.ce_rsce_cta_mini{background: $primary; color: contrastFW(body(background),$primary);border-bottom: 5px solid $secondary; font-size: 0.8rem;
-	@for $index from 1 through 3{
+.ce_rsce_cta_mini{background: $primary; color: contrastFW(body(background),$primary); border-bottom: 5px solid $secondary; font-size: 0.8rem;
+	@for $index from 1 through 5{
 	  &:nth-of-type(#{$index}n)+.ce_rsce_cta_mini{background: lighten($primary,(($index*10)*0.5)); }
 	}
-	&+.ce_rsce_cta_mini{border-bottom-color: $tertiary;
-		&+.ce_rsce_cta_mini{border-bottom-color: color(spindle);
-			&+.ce_rsce_cta_mini{border-bottom-color: color(purple);}
-		}
-	}
+	&:nth-of-type(2n){border-bottom-color: $tertiary;}
+	&:nth-of-type(3n){border-bottom-color: color(spindle);}
+	&:nth-of-type(4n){border-bottom-color: color(purple);}
 }
 
 .cta__icon{margin-right: $spacing; font-size: 1.8em; line-height: 1;}
+.cta__title{@include lastChildNoMargin();}
 .cta__content{
 	.ce_text{@include lastChildNoMargin();}
 }
+.cta__toggler+.cta__content{display: none;}
 
 // isotope
 .mod_iso_orderhistory .table td, .mod_iso_orderhistory .table th{vertical-align:middle}
+
+// gallery
+.ce_gallery{@extend .no-txt-limit;}
+.ce_gallery ul{list-style: none; padding: 0; display: flex; flex-wrap: wrap; @extend .no-pbreak;}
+.ce_gallery ul li{    display: flex; align-items: center; justify-content: center;}
+.ce_gallery ul li .image_container{margin-bottom: 0;}
+@for $index from 1 through 12 {
+	.ce_gallery .cols_#{$index} li{width: 100% / $index; margin: 0; padding: 0 $spacing*0.5 $spacing;}
+}
+.ce_gallery ul li.col_first{padding-left: 0; clear: both}
+.ce_gallery ul li.col_last{padding-right: 0;}
