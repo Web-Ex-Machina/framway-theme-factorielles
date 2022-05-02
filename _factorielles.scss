@@ -400,17 +400,19 @@ $heightMain : 1.85em;
 .ce_cta{@extend .m-bottom !optional; padding: 1em 1.5em;  line-height: 1; 
 	>a{text-decoration: none; color: inherit;}
 }
-.ce_rsce_cta_mini{background: $primary; color: contrastFW(body(background),$primary); border-bottom: 5px solid $secondary; font-size: 0.8rem;
-	@for $index from 1 through 5{
-	  &:nth-of-type(#{$index}n)+.ce_rsce_cta_mini{background: lighten($primary,(($index*10)*0.5)); }
+.ce_rsce_cta_mini{border-bottom: 5px solid $secondary; font-size: 0.8rem;
+	&:not([class*=bg-]){ background: $primary; color: contrastFW(body(background),$primary); 
+		@for $index from 1 through 5{
+		  &:nth-of-type(#{$index}n){background: lighten($primary,(($index*10)*0.5)); }
+		}
 	}
 	&:nth-of-type(2n){border-bottom-color: $tertiary;}
 	&:nth-of-type(3n){border-bottom-color: color(spindle);}
 	&:nth-of-type(4n){border-bottom-color: color(purple);}
 }
 
-.cta__icon{margin-right: $spacing; font-size: 1.8em; line-height: 1;}
-.cta__title{@include lastChildNoMargin();}
+.cta__icon{margin-right: $spacing; font-size: 1.8em; line-height: 1;display: inline-block;flex-shrink: 0; }
+.cta__title{@include lastChildNoMargin(); display: flex; align-items: center;}
 .cta__content{
 	.ce_text{@include lastChildNoMargin();}
 }
@@ -429,3 +431,16 @@ $heightMain : 1.85em;
 }
 .ce_gallery ul li.col_first{padding-left: 0; clear: both}
 .ce_gallery ul li.col_last{padding-right: 0;}
+
+
+// CART
+.table-list__cell{ 
+  &[data-name="quantity"]{ width: 50px; min-width: 0; 
+  	input{min-width: 50px;text-align: center;}
+  }
+}
+
+
+#formation-intra-devis{
+	.formbody{@extend .d-grid,.cols-3,.cols-lg-2,.cols-xs-1 !optional;}
+}
