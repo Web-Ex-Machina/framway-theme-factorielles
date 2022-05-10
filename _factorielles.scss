@@ -41,6 +41,10 @@ ol, p, ul{margin-bottom: 0.65em;}
 
 .accordionFW__content__wrapper{@extend .no-txt-limit,.clear-after;}
 
+.tabs__nav{display: flex; flex-wrap: wrap; margin-right: -5px;
+	button{flex-grow: 1; margin: 0 5px 5px 0;}
+}
+
 .heroFW__content .heroFW__content__wrapper{@extend .container !optional; width: 100%; margin-left: auto; margin-right: auto; padding-left: var(--bs-gutter-x,.75rem); padding-right: var(--bs-gutter-x,.75rem);
 	@include media-max(xs){padding: 0;}
 }
@@ -365,6 +369,7 @@ $breadcrumb--height: 3rem;
 	.mediacontent__content{position: relative; padding: 15%; 
 		@include media-max(md){ text-align: center; }
 		@include media-max(xxs){padding-right: 1.5em;padding-left: 1.5em;}
+		+.mediacontent__media{margin-left: -1px; margin-right: -1px;}
 	}
 	.mediacontent__media{position: relative; display: flex;align-items: center; justify-content: center;}
 	&.media--overlap{
