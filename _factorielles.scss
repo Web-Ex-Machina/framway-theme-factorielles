@@ -209,7 +209,8 @@ body.home{
 	#main>.inside{display: flex; flex-wrap: wrap; width: 100%; }
 	.mod_article{width: 100%;}
 }
-#home__hero{ @extend .counter-x !optional; width: 100vw; padding: 0; margin-bottom: 0; min-height: 88vh; min-height: calc(100vh - 115px);
+#home__hero{ width: 100vw; padding: 0; margin-bottom: 0; min-height: 88vh; min-height: calc(100vh - 115px);
+	.p-x>&{@extend .counter-x !optional;}
 	.home__title{ font-size: 2.25em; font-size: calc(1em + 2vw); line-height: 1.2; white-space: nowrap;
 		h1,h2{font-size: 1em;}
 	}
@@ -231,7 +232,8 @@ body.home{
 	}
 }
 
-#home__vosenjeux{@extend .counter-x !optional; width: 100vw;
+#home__vosenjeux{ width: 100vw;
+	.p-x>&{@extend .counter-x !optional;}
 	.home__vosenjeux__wrapper{position: relative; background-repeat: no-repeat; background-size: auto; background-repeat: no-repeat; padding: 5% 15% 5%; }
 	.home__vosenjeux__img{position: absolute; right: 0; top: 0; bottom: 0; z-index: -1; width: 50vw;
 		@include media-max(xl){width: 40vw;}
@@ -243,7 +245,8 @@ body.home{
 	}
 	.title--compound{@include media-max(md){text-align: center;}}
 }
-#home__notreecosysteme{@extend .counter-x !optional; width: 100vw; position: relative;
+#home__notreecosysteme{width: 100vw; position: relative;
+	.p-x>&{@extend .counter-x !optional;}
 	.home__notreecosysteme__wrapper{position: relative; padding: 15% 15%;
 		padding-right: 50vw*0.5;
 		@include media-max(md){padding-right: 15%; text-align: center; }
