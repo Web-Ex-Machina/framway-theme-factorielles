@@ -434,6 +434,7 @@ $heightMain : 1.85em;
 // CTA
 .ce_cta{@extend .m-bottom !optional; padding: 1em 1.5em;  line-height: 1; 
 	>a{text-decoration: none; color: inherit;}
+	&[class*="bd-bottom"]:not([class*=p-bottom]){padding: 1em 1.5em;}
 }
 .ce_rsce_cta_mini{border-bottom: 5px solid $secondary; font-size: 0.8rem;
 	&:not([class*=bg-]){ background: $primary; color: contrastFW(body(background),$primary); 
