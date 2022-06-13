@@ -8,6 +8,7 @@ module.exports = {
 		'greylighter' : '#E6E6E6',
 		'tertiary': '#FA7555',
 	},
+	'spacing': '1rem',
 	'primary': 'colors(valhalla)',
 	'secondary': 'colors(meadow)',
 	'tertiary': 'colors(bittersweet)',
