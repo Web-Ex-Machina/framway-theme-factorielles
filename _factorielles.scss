@@ -297,6 +297,9 @@ $breadcrumb--height: 3rem;
 
 // block card
 .block-card{
+	.block-card__badge{font-size: 0.65rem; display: inline-block;padding: 0.5em 0.85em; border-radius: 4px;line-height: 20px;margin-top: 10px;margin-bottom: 1.5em;
+		img{height: 20px;width: auto;vertical-align: top;margin-right: 5px;}
+	}
 	&[data-preset="factorielles--infocard"]{
 		// inherited =style from default
 		.block-card__wrapper{@extend %paper !optional;}
