@@ -542,6 +542,18 @@ $heightMain : 1.85em;
   .block-card__title{font-size: 1.75em;}
 }
 
+// EVENTS LIST
+.mod_eventlist{
+	.event.layout_list{transition: opacity 0.4s; opacity: 1;
+		.block-card__content {padding: 1.5em 1.35em;}
+		&:nth-child(2n){@extend .content__bg--greylighter !optional;
+			a.block-card__wrapper:hover{color: inherit !important;}
+		}
+	}
+	&:hover{
+		.event.layout_list:not(:hover){opacity: 0.4;}
+	}
+}
 
 // CTA FIXED
 #ctaFixedContainer{position: fixed; right: 0; top: 0; bottom: 0; display: flex; flex-direction: column; justify-content: center; z-index: 10; pointer-events: none; margin-right: 0.5em;
