@@ -11,6 +11,11 @@ $(function(){
     $('.ce_rsce_cta_mini .cta__toggler').on('click', function(e){
         $(this).next('.cta__content').slideToggle();
     });
+    $('body').on('click','#tarteaucitronAllAllowed,#tarteaucitronAllDenied',function(){
+        setTimeout(function(){
+            tarteaucitron.userInterface.closePanel();
+        },500)
+    })
     
 	init();
 });
