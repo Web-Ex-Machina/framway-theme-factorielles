@@ -16,6 +16,17 @@ $(function(){
             tarteaucitron.userInterface.closePanel();
         },500)
     })
+
+    if ($('.priceCard.isMain').length) {
+        var $mainCard = $('.priceCard.isMain');
+        $(window).resize(function(){
+            if ($mainCard.prev('.priceCard').length) {
+                $('.priceCard').removeClass('m-bottom');
+                if ($mainCard.prev('.priceCard').offset().top != $mainCard.offset().top ) 
+                    $('.priceCard').addClass('m-bottom');
+            }
+        }).trigger('resize');
+    }
     
 	init();
 });
