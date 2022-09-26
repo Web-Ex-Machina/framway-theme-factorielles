@@ -353,7 +353,7 @@ $breadcrumb--height: 3rem;
 		// &:after{@include pseudo(); top: -1em; left:-1em; width: 60%; height: 60%; background: color(spindle); z-index: -1;}
 		@include media-max(md){width: auto; margin: 0 1em;}
 	}
-	.wrapper{display: flex; align-items: center; padding: 2em;}
+	.wrapper{display: flex; align-items: center; padding: 2em; align-self: center;}
 	.quote{font-weight: 300;}
 	.author{color: $secondary; 
 		strong{font-weight: 400;}
