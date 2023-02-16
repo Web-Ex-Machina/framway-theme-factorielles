@@ -50,4 +50,6 @@ module.exports = {
 		'uppercase': false,
 		'font-weight': 400,
 	},
+	'thumb-color': 'input(background)',
+	'thumb-width': '0.5em',
 };
