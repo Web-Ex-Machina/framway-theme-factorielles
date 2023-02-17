@@ -25,6 +25,9 @@ h2,.h2{font-size: 2.65rem;}
   	font-weight: normal;
   }
 }
+%input{
+	&.mandatory{border-color: $primary !important;}
+}
 
 .txt-limit-x2 p, 
 .txt-limit-x2 ul, 
