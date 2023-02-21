@@ -221,6 +221,10 @@ body.home{
 	#main{display: flex; width: 100%;}
 	#main>.inside{display: flex; flex-wrap: wrap; width: 100%; }
 	.mod_article{width: 100%;}
+
+	.ce_rsce_sliderFW{
+		.sliderFW__item__bg{padding: 1em;}
+	}
 }
 #home__hero{ width: 100vw; padding: 0; margin-bottom: 0; min-height: 88vh; min-height: calc(100vh - 115px);
 	.p-x>&{@extend .counter-x !optional;}
