@@ -224,6 +224,11 @@ body.home{
 
 	.ce_rsce_sliderFW{
 		.sliderFW__item__bg{padding: 1em;}
+		&.fit--unset{
+			.sliderFW__item__bg{display: flex;align-items: center;
+				img{height: auto; max-width: 100%;}
+			}
+		}
 	}
 }
 #home__hero{ width: 100vw; padding: 0; margin-bottom: 0; min-height: 88vh; min-height: calc(100vh - 115px);
