@@ -592,3 +592,7 @@ $heightMain : 1.85em;
 .audioPlayer{background: $secondary; color: contrastFW(#fff,$secondary); padding: 1em 0; position: fixed; width: 100%; bottom: 0; left: 0; z-index: 1; transition: opacity 0.5s; opacity: 1;
 	&:not(.active){opacity: 0;pointer-events: none;}
 }
+.audiotrack__play{background: $tertiary;}
+.audiotrack__likes{
+  i[class*=fa],svg{color: $tertiary;}
+}
