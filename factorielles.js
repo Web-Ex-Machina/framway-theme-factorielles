@@ -27,6 +27,14 @@ $(function(){
             }
         }).trigger('resize');
     }
+
+    var $cta = $('#header .header__cta').clone()
+    $cta.contents().filter(function() {
+            return this.nodeType == 3; //Node.TEXT_NODE
+    }).remove();
+    $cta.find('.btn-icon').wrapAll('<div></div>');
+    $('#header .headerFW__nav__panel>ul').first().append($cta)
+
     
 	init();
 });
