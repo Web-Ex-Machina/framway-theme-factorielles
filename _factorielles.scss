@@ -590,9 +590,9 @@ $heightMain : 1.85em;
 		&:before{content:""; display: block; height: 1px; width: 100%; background: color(greylighter);margin-bottom: 3rem; margin-top: 1rem;}
 	}
 }
-.audiotrack__figure{
-  &:after{content:""; position: absolute; z-index: 0; background:  rgba($secondary,0.6); width: 25%; min-width: 100px; height: 110%; top: 50%; left: 50%; transform: translate(-50%, -50%) skew(-15deg);}
-}
+// .audiotrack__figure{
+//   &:after{content:""; position: absolute; z-index: 0; background:  rgba($secondary,0.6); width: 25%; min-width: 100px; height: 110%; top: 50%; left: 50%; transform: translate(-50%, -50%) skew(-15deg);}
+// }
 
 
 .audioPlayer{background: $secondary; color: contrastFW(#fff,$secondary); padding: 1em 0; position: fixed; width: 100%; bottom: 0; left: 0; z-index: 1; transition: opacity 0.5s; opacity: 1;
