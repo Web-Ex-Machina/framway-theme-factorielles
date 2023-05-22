@@ -50,9 +50,9 @@ module.exports = {
 		'uppercase': false,
 		'font-weight': 400,
 	},
-	'input-invalid': {
-		'border-color': 'input(border-color)',
-	},
+	// 'input-invalid': {
+	// 	'border-color': 'input(border-color)',
+	// },
 	'thumb-color': 'input(background)',
 	'thumb-width': '0.5em',
 };
