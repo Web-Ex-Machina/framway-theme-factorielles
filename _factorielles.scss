@@ -36,6 +36,28 @@ p.txt-limit-x2{max-width: body(line-height)*26ch; }
 
 ol, p, ul{margin-bottom: 0.65em;}
 
+li[data-icon]{padding-left: 0.75em;
+	&::marker{content: attr(data-icon); font-family: 'Font Awesome 6 Free'; }
+	&.fa--solid{
+		&::marker{font-weight: 900;}
+	}
+	&.fa--regular{
+		&::marker{font-weight: 400;}
+	}
+	&.fa--light{
+		&::marker{font-weight: 300;}
+	}
+	&.fa--thin{
+		&::marker{font-weight: 100;}
+	}
+	&.fa--duotone{
+		&::marker{font-family: 'Font Awesome 6 Duotone';}
+	}
+	&.fa--pro{
+		&::marker{font-family: 'Font Awesome 6 Pro';}
+	}
+}
+
 .mod_article{ padding: $spacing*2 0;
 	// @extend .txt-limit;
   @include media-max(xs){ padding: $spacing 0;}
@@ -47,6 +69,7 @@ ol, p, ul{margin-bottom: 0.65em;}
   }
 }
 
+.accordionFW{box-shadow: none;}
 .accordionFW__content__wrapper{@extend .no-txt-limit,.clear-after;}
 
 .tabs__nav{display: flex; flex-wrap: wrap; margin-right: -5px;
@@ -68,6 +91,7 @@ ol, p, ul{margin-bottom: 0.65em;}
 .btn{
 	i[class*=long-arrow]{margin-top: 0.25em !important;}
 }
+.btn-rounded{border-radius: 10em !important;}
 
 a.see-more{text-decoration: none; font-size: 1.2em;
 	&:not([class*=ft-]){color: color(purple);}
@@ -103,6 +127,10 @@ i[class*=long-arrow]{vertical-align: text-bottom;}
 .ce_headline[class*="sep-bot-"],
 .title--sep{@extend %title--sep;}
 
+.video--bordered{
+	border: 0.75em solid lighten($primary,10); background: lighten($primary,10); border-radius: $radius; overflow: hidden; max-width: 1200px; margin-left: auto; margin-right: auto;
+	.img-container{border-radius: $radius; overflow: hidden; }
+}
 
 .grid--2cols{ @extend .d-grid,.cols-12,.gap-2 !optional;
 	>div:nth-of-type(1){@extend .cols-span-8,.cols-span-lg-7,.cols-span-md-12,.p-x-x2 !optional;}
@@ -374,6 +402,18 @@ $breadcrumb--height: 3rem;
 	}
 }
 
+// quote with note
+.ce_rsce_quoteWnote { position: relative;
+	.quote--icon{ font-size: 4em; position: absolute; right: 15%; top: -0.4em; color:color(spindle); }
+	.note{ margin-bottom: 0.75em;}
+	.note--text{}
+	.note--stars{
+		.note--text+&{margin-top: 0.25em;}
+	}
+	.quote{font-size: 0.8em;}
+	.author{font-weight: 600; font-size: 0.85em;}
+	.author_position{font-size: 0.7em; font-weight: 300;}
+}
 
 // LIST ICONS
 .ce_rsce_listIcons{ margin-bottom: $spacing;
@@ -406,7 +446,9 @@ $breadcrumb--height: 3rem;
 // ce_rsce_mediacontent
 .ce_rsce_mediacontent{
 	.mediacontent__content{position: relative; padding: 15%; 
-		@include media-max(md){ text-align: center; }
+		@include media-max(md){ text-align: center;
+			ul,ol{text-align: left; width: fit-content; margin-left: auto; margin-right: auto;}
+		}
 		@include media-max(xxs){padding-right: 1.5em;padding-left: 1.5em;}
 		+.mediacontent__media{margin-left: -1px; margin-right: -1px;}
 	}
@@ -451,6 +493,51 @@ $heightMain : 1.85em;
 	a{width: 100%;}
 }
 
+// ce_rsce_priceCardsV2
+.ce_rsce_priceCardsV2{padding: 0; overflow: hidden;
+	.item-grid>&{height: 100%;}
+	@each $key, $value in $colors{
+		&.color--#{$key}{
+			&.bordered{border: 4px solid rgba($value,0.6);}
+			&.title--bg .priceCardsV2__title{background: rgba($value,0.6); color: contrastFW(body(font-color),rgba($value,0.6));}
+			.priceCardsV2__cta,
+			.priceCardsV2__lines li[data-icon]::marker{color:$value;}
+		} 
+	}
+}
+.priceCardsV2__wrapper{padding: 0 2em;}
+.priceCardsV2__title{padding: 1.5em 2em; margin: 0 -2em;
+	span{display: inline-block;}
+}
+.priceCardsV2__content{padding: 1em 0;}
+.priceCardsV2__text{}
+.priceCardsV2__lines{
+	&:is(ul){padding-left: 1.25em;}
+	li{margin-bottom: 1em; font-weight: 400; font-size: 0.85em;
+		&[data-icon]::marker{font-size: 1.2em;}
+	}
+}
+.priceCardsV2__footer{}
+.priceCardsV2__price__wrapper{}
+.priceCardsV2__price{}
+.priceCardsV2__frequency{}
+.priceCardsV2__cta{}
+
+
+// countUpFW
+.countUpFW{
+	@each $key, $value in $colors{
+		&.color--#{$key}{
+			.countUpFW__icon,
+			.countUpFW__num,
+			.countUpFW__unit{color:$value;}
+		} 
+	}
+}
+.countUpFW__icon{font-size: 3em;line-height: 1;}
+.countUpFW__num{font-size: 2.5em;}
+.countUpFW__unit{font-weight: 400;}
+.countUpFW__label{font-size: 1em;font-weight: 400; margin-top: 0.5em;}
 
 // CTA
 .ce_cta{@extend .m-bottom !optional; padding: 1em 1.5em;  line-height: 1; 

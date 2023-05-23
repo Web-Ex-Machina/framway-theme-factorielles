@@ -5,6 +5,7 @@ module.exports = {
 		'bittersweet' : '#FA7555',
 		'spindle' : '#BCE5EE',
 		'purple' : '#6667AB',
+		'vine': '#c23854',
 		'greylighter' : '#E6E6E6',
 		'tertiary': '#FA7555',
 	},
