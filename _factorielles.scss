@@ -494,34 +494,64 @@ $heightMain : 1.85em;
 }
 
 // ce_rsce_priceCardsV2
-.ce_rsce_priceCardsV2{padding: 0; overflow: hidden;
+.ce_rsce_priceCardsV2{padding: 0; overflow: hidden; display: flex; flex-direction: column;
 	.item-grid>&{height: 100%;}
 	@each $key, $value in $colors{
 		&.color--#{$key}{
-			&.bordered{border: 4px solid rgba($value,0.6);}
-			&.title--bg .priceCardsV2__title{background: rgba($value,0.6); color: contrastFW(body(font-color),rgba($value,0.6));}
+			&.bordered{border: 4px solid lighten($value,30);}
+			&.bordered--hover{ outline: 4px solid transparent; transition: outline-color 0.4s; outline-offset: -4px;
+				&:hover{outline-color: lighten($value,30);}
+			}
+			&.title--bg{
+				.priceCardsV2__title{background: lighten($value,30); padding: 1.15em 2rem; color: contrastFW(body(font-color),lighten($value,30));border: 4px solid lighten($value,30); border-bottom: 0;
+					margin: -4px -4px 0;
+				}
+			}
 			.priceCardsV2__cta,
-			.priceCardsV2__lines li[data-icon]::marker{color:$value;}
+			.priceCardsV2__lines li[data-icon]::marker,
+			.priceCardsV2__frequency{color:$value;}
+			.priceCardsV2__cta a {
+				i[class*=fa],svg{background: $value;}
+			}
 		} 
 	}
 }
-.priceCardsV2__wrapper{padding: 0 2em;}
-.priceCardsV2__title{padding: 1.5em 2em; margin: 0 -2em;
+.priceCardsV2__wrapper{padding: body(line-height)*1em 2rem; gap: body(line-height)*1em; display: flex;flex-direction: column; flex-grow: 1;}
+.priceCardsV2__title{padding: body(line-height)*1em 2rem 0.5em; text-align: center; font-size: 1.35em;
 	span{display: inline-block;}
 }
-.priceCardsV2__content{padding: 1em 0;}
+.priceCardsV2__content{ flex-grow: 1;}
 .priceCardsV2__text{}
 .priceCardsV2__lines{
+	.priceCardsV2__text+&{margin-top: body(line-height)*1em;}
 	&:is(ul){padding-left: 1.25em;}
 	li{margin-bottom: 1em; font-weight: 400; font-size: 0.85em;
 		&[data-icon]::marker{font-size: 1.2em;}
 	}
 }
-.priceCardsV2__footer{}
-.priceCardsV2__price__wrapper{}
-.priceCardsV2__price{}
-.priceCardsV2__frequency{}
-.priceCardsV2__cta{}
+.priceCardsV2__footer{ display: flex;flex-wrap: wrap;justify-content: center; align-items: flex-end;gap: body(line-height)*1em;
+	>*{flex: 1 1 auto;}
+}
+.priceCardsV2__price__wrapper{display: grid;}
+.priceCardsV2__price{font-size: 2em;}
+.priceCardsV2__frequency{font-size: 0.75em; font-style: italic;}
+.priceCardsV2__cta{flex-grow: 0; opacity: 0.8; transition: opacity 0.4s; margin-left: auto;
+	&:hover{opacity: 1;}
+	a{display: flex;align-items: center;gap: 0.75em;font-size: 1.2em; text-decoration: none; color: inherit;
+		&:hover{color: inherit;}
+		i[class*=fa],svg{
+			width: 1.75em;
+			height: 1.75em;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: $primary;
+			color: body(block-background);
+			border-radius: 100%;
+			font-size: 1.25em;
+		}
+	}
+}
 
 
 // countUpFW
