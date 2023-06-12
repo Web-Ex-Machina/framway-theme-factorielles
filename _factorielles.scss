@@ -11,7 +11,7 @@ body{@extend .ft-futura;}
 	@include media-min(xl){max-width: 1680px;}
 }
 h1,.h1{@extend .ft-playfair; text-transform: none; font-weight: bold;}
-h2,.h2{font-size: 2.65rem;}
+h2,.h2{font-size: 2rem;}
 .heroFW[class*="title--"]{
 	h1,.h1{font-weight: bold;}
 }
@@ -29,6 +29,10 @@ h2,.h2{font-size: 2.65rem;}
 	&.mandatory{border-color: $primary !important;}
 }
 
+.txt-limit-x1-5 p, 
+.txt-limit-x1-5 ul, 
+.txt-limit-x1-5 ol, 
+p.txt-limit-x1-5{max-width: body(line-height)*45ch; }
 .txt-limit-x2 p, 
 .txt-limit-x2 ul, 
 .txt-limit-x2 ol, 
@@ -105,7 +109,7 @@ i[class*=long-arrow]{vertical-align: text-bottom;}
 }
 
 .title--compound{margin-bottom: 1.85rem;
-	&:not([class*=ft-]){font-size: 2.65rem;}
+	&:not([class*=ft-]){font-size: 2rem;}
 	p,h1,h2,h3,h4,h5,h6{margin: 0; font-weight: normal;}
 	h1,h2,h3,h4,h5,h6{font-size: inherit;}
 	p{font-size: 1rem;line-height: body(line-height);
