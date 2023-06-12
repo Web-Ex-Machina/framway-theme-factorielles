@@ -62,6 +62,26 @@ li[data-icon]{padding-left: 0.75em;
 	}
 }
 
+[class*="list-check"]{
+	&.fa--solid{li::marker{font-weight: 900;}}
+	&.fa--regular{li::marker{font-weight: 400;}}
+	&.fa--light{li::marker{font-weight: 300;}}
+	&.fa--thin{li::marker{font-weight: 100;}}
+	&.fa--duotone{li::marker{font-family: 'Font Awesome 6 Duotone';}}
+	&.fa--pro{li::marker{font-family: 'Font Awesome 6 Pro';}}
+	li{ @extend li[data-icon] !optional; margin-bottom: 0.5em;
+		&::marker{ content:""; }
+	}
+	@each $key, $value in $colors{
+		&[class*=--#{$key}] li::marker{color:$value;}
+	}
+}
+
+.bg-primary,
+.bg-valhalla{
+	&:not([class*=ft-]){color: color(white);}
+}
+
 .mod_article{ padding: $spacing*2 0;
 	// @extend .txt-limit;
   @include media-max(xs){ padding: $spacing 0;}
