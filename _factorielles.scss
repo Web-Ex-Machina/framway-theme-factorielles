@@ -458,16 +458,20 @@ $breadcrumb--height: 3rem;
 }
 
 // quote with note
-.ce_rsce_quoteWnote { position: relative;
-	.quote--icon{ font-size: 4em; position: absolute; right: 15%; top: -0.4em; color:color(spindle); }
-	.note{ margin-bottom: 0.75em;}
+.ce_rsce_quoteWnote { position: relative; padding: 1em;
+	.quote--icon{ font-size: 4em; position: absolute; right: 15%; top: -0.4em; color: #6B9AD1; }
+	.note{ margin-bottom: 0.75em; font-family: 'Futura PT Demi';}
 	.note--text{}
-	.note--stars{
+	.note--stars{ color: #D88599;
 		.note--text+&{margin-top: 0.25em;}
 	}
-	.quote{font-size: 0.8em;}
-	.author{font-weight: 600; font-size: 0.85em;}
+	.quote{font-size: 0.7em;}
+	.author{font-weight: 600; font-size: 0.75em;}
 	.author_position{font-size: 0.7em; font-weight: 300;}
+	&.minimalist{}
+	.ce_rsce_mediacontent &{
+		@include media-max(lg){max-width: 400px; margin-left: auto; margin-right: auto;}
+	}
 }
 
 // LIST ICONS
