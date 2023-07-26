@@ -143,8 +143,19 @@ i[class*=long-arrow]{vertical-align: text-bottom;}
 
 .title--compound{margin-bottom: 1.85rem;
 	&:not([class*=ft-]){font-size: 2rem;}
-	p,h1,h2,h3,h4,h5,h6{margin: 0; font-weight: normal;}
-	h1,h2,h3,h4,h5,h6{font-size: inherit;}
+	p,
+	.h1,h1,
+	.h2,h2,
+	.h3,h3,
+	.h4,h4,
+	.h5,h5,
+	.h6,h6{margin: 0; font-weight: normal;}
+	.h1,h1,
+	.h2,h2,
+	.h3,h3,
+	.h4,h4,
+	.h5,h5,
+	.h6,h6{font-size: inherit; line-height: 1.2;}
 	p{font-size: 1rem;line-height: body(line-height);
 		&+p{margin-top: 1em;}
 	}
