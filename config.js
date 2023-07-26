@@ -6,7 +6,7 @@ module.exports = {
 		'spindle' : '#BCE5EE',
 		'purple' : '#6667AB',
 		'vine': '#c23854',
-		'greylighter' : '#E6E6E6',
+		'greylighter' : '#F4F4F8',
 		'tertiary': '#FA7555',
 	},
 	'spacing': '1rem',
@@ -16,7 +16,7 @@ module.exports = {
 	'radius': '15px',
 
 	'body': {
-		'background': 'colors(white)',
+		'background': '#FCFCFC',
 		'block-background': 'colors(white)',
 		'font-color': 'primary',
 		'font-size'		: '24px',
