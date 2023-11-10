@@ -450,7 +450,7 @@ $breadcrumb--height: 3rem;
 
 
 // quote
-.ce_rsce_quote{
+.ce_rsce_quoteWpicture{
 	&[class*="backband--"]{@extend .clear-after !optional;
 		max-width: 1200px; margin: auto;
 		.wrapper{padding: 2em;}
