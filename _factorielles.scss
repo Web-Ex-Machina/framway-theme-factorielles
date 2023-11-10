@@ -351,34 +351,34 @@ body.home{
 	}
 }
 
-#home__vosenjeux{ width: 100vw;
-	.p-x>&{@extend .counter-x !optional;}
-	.home__vosenjeux__wrapper{position: relative; background-repeat: no-repeat; background-size: auto; background-repeat: no-repeat; padding: 5% 15% 5%; }
-	.home__vosenjeux__img{position: absolute; right: 0; top: 0; bottom: 0; z-index: -1; width: 50vw;
-		@include media-max(xl){width: 40vw;}
-		@include media-max(lg){width: 30vw;}
-		@include media-max(md){position: relative; width: 100vw; left: 50%; transform: translateX(-50%); margin-top: -20%;}
-		figure{@extend %img-container !optional;
-			img{object-position: right;}
-		}
-	}
-	.title--compound{@include media-max(md){text-align: center;}}
-}
-#home__notreecosysteme{width: 100vw; position: relative;
-	.p-x>&{@extend .counter-x !optional;}
-	.home__notreecosysteme__wrapper{position: relative; padding: 15% 15%;
-		padding-right: 50vw*0.5;
-		@include media-max(md){padding-right: 15%; text-align: center; }
-		@include media-max(xxs){padding-right: 1.5em;padding-left: 1.5em;}
-	}
-	.title--compound{@include media-max(md){margin: auto;}}
-	.home__notreecosysteme__media{position: absolute; top: 50%;right: 0;transform: translate(0%,-50%); 
-		// @extend %img-container,.r_16-9 !optional;
-		// figure{@extend %img-container,.r_16-9 !optional;}
-		width: 50vw;
-		@include media-max(md){position: relative; width: 110vw; left: 50%; top: 0;transform: translateX(-50%);}
-	}
-}
+// #home__vosenjeux{ width: 100vw;
+// 	.p-x>&{@extend .counter-x !optional;}
+// 	.home__vosenjeux__wrapper{position: relative; background-repeat: no-repeat; background-size: auto; background-repeat: no-repeat; padding: 5% 15% 5%; }
+// 	.home__vosenjeux__img{position: absolute; right: 0; top: 0; bottom: 0; z-index: -1; width: 50vw;
+// 		@include media-max(xl){width: 40vw;}
+// 		@include media-max(lg){width: 30vw;}
+// 		@include media-max(md){position: relative; width: 100vw; left: 50%; transform: translateX(-50%); margin-top: -20%;}
+// 		figure{@extend %img-container !optional;
+// 			img{object-position: right;}
+// 		}
+// 	}
+// 	.title--compound{@include media-max(md){text-align: center;}}
+// }
+// #home__notreecosysteme{width: 100vw; position: relative;
+// 	.p-x>&{@extend .counter-x !optional;}
+// 	.home__notreecosysteme__wrapper{position: relative; padding: 15% 15%;
+// 		padding-right: 50vw*0.5;
+// 		@include media-max(md){padding-right: 15%; text-align: center; }
+// 		@include media-max(xxs){padding-right: 1.5em;padding-left: 1.5em;}
+// 	}
+// 	.title--compound{@include media-max(md){margin: auto;}}
+// 	.home__notreecosysteme__media{position: absolute; top: 50%;right: 0;transform: translate(0%,-50%); 
+// 		// @extend %img-container,.r_16-9 !optional;
+// 		// figure{@extend %img-container,.r_16-9 !optional;}
+// 		width: 50vw;
+// 		@include media-max(md){position: relative; width: 110vw; left: 50%; top: 0;transform: translateX(-50%);}
+// 	}
+// }
 
 
 
