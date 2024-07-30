@@ -8,7 +8,7 @@ module.exports = {
 		'vine': '#c23854',
 		'greylighter' : '#F4F4F8',
 		'tertiary': '#FA7555',
-		// n00bs colors
+		// n00bs colors - my account
 		'greylight':'#F5F8FD',
 		'greendark':'#08534B',
 		'greenmiddle':' #39988D',
@@ -22,6 +22,12 @@ module.exports = {
 		'orangelight':'#FFFAF0',
 		'reddark':'#D9531F',
 		'redlight':'#D97346',
+		// n00bs colors - product reader
+		'salmon':'#F87C56',
+		'turquoise':'#59C3D1',
+		'greylight2':'#DCE7EE',
+		'greenlight4':'#E7F7F6',
+		'greylight3':'#B3CADB'
 	},
 	'spacing': '1rem',
 	'primary': 'colors(valhalla)',

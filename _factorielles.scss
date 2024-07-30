@@ -855,7 +855,9 @@ $heightMain : 1.85em;
 .ce_hyperlinkbreakpoints > figure > a > img {
 	border-radius:5px;
 }
-
+/***************************************/
+/* n00bs - my account */
+/***************************************/
 .mod_facAccountMenu,
 .mod_facAccountPreviousOrder,
 .mod_facAccountNextEvent,
@@ -1563,5 +1565,310 @@ $heightMain : 1.85em;
 .fac_myinformations_personaldata a:hover{
 	color:color(yellowlight);
 	background-color:color(greenlight);
+	text-decoration: none;
+}
+
+/***************************************/
+/* n00bs - product reader */
+/***************************************/
+.product_reader__top{
+	background-color: white;
+	padding:1.5em;
+	border-radius: 10px;
+}
+.product_reader__top__tag,
+.product_reader__sidepanel__tag{
+	margin-right: 10px;
+}
+.product_reader__top__tag > div,
+.product_reader__sidepanel__tag > span{
+	border-radius: 50px;
+	padding: 5px 1em;
+	text-transform: uppercase;
+}
+.product_reader__top__name,
+.product_reader__sidepanel__name{
+	font-size: 1.5em;
+}
+
+.product_reader__top__buttons .bookmark{
+	background-color: color(salmon); /* salmon */
+	color: white;
+	text-transform: uppercase;
+	padding: 10px 1em;
+	border-radius: 50px;
+	text-decoration: none;
+	margin-right: 1em;
+}
+.product_reader__top__buttons .share{
+	background-color: color(purple); /* purple */
+	color: white;
+	text-transform: uppercase;
+	padding: 10px 1em;
+	border-radius: 50px;
+	text-decoration: none;
+}
+
+.product_reader__block,
+.product_reader__formation_intra,
+.product_reader__formation_indiv,
+.product_reader__testimonies,
+.product_reader__free_content,
+.product_reader__teachers
+{
+	background-color: white;
+	padding:10px;
+	border-radius: 10px;
+}
+
+.product_reader__block__icon{
+	margin-right: 10px;
+	font-size: 2em;
+}
+.product_reader__block__content__title{
+	font-size: 0.8em;
+}
+.product_reader__block__content__subtitle{
+
+}
+
+.product_reader__block_programm{
+	color: white;
+	background-color: color(turquoise); /* turquoise */
+	padding:10px;
+	border-radius: 10px;
+}
+.product_reader__block_programm a{
+	color: white;
+}
+
+.product_reader__block.qualiopi{
+	font-size: 0.8em;
+}
+
+.product_reader__block.objectifs ul{
+	list-style-type: "\25b8";
+/*		list-style-type: none;*/
+}
+.product_reader__block.objectifs ul li::before{
+/*		content: "<i class=\"fa-sharp fa-thin fa-circle-check\"></i>";*/
+}
+
+.product_reader__block.objectifs img{
+	border-radius: 10px;
+}
+.product_reader__block.objectifs .objectifs__title__first_letter {
+	border-bottom: 5px solid color(turquoise); /* turquoise */
+}
+
+.product_reader__block.thematique .theme{
+	margin: 1em 0;
+	font-weight: bold;
+}
+.product_reader__block.thematique .tabs .tabs__nav{
+	border: 1px solid color(greylight2); /* lightgrey */
+	border-radius: 10px;
+	padding: 5px;
+}
+.product_reader__block.thematique .tabs .tabs__nav [type="button"]{
+	color: black;
+	background-color:transparent;
+	border-radius: 10px;
+	padding: 10px;
+	border:none;
+}
+.product_reader__block.thematique .tabs .tabs__nav [type="button"].active{
+	background-color:color(greylight2); /* lightgrey */
+}
+.product_reader__block.thematique .tabs .tabs__content{
+	border: 1px solid color(greylight2); /* lightgrey */
+	border-radius: 4px;
+	padding: 10px;
+}
+
+.product_reader__formation_indiv .btn,
+.product_reader__formation_intra .btn
+{
+	border-radius: 25px;
+}
+
+.product_reader__formation_indiv__reference,
+.product_reader__formation_intra__reference,
+.product_reader__sidepanel__formation_indiv__reference,
+.product_reader__sidepanel__formation_intra__reference
+{
+	background-color: color(greenlight4); /* green-light */
+	padding: 0.5em;
+	font-size: 0.8em;
+	border-radius: 10px;
+}
+.product_reader__formation_indiv__prices,
+.product_reader__formation_intra__prices,
+.product_reader__sidepanel__formation_indiv__prices,
+.product_reader__sidepanel__formation_intra__prices
+{
+	margin-top: 10px;
+}
+.product_reader__formation_indiv__prices > div,
+.product_reader__formation_intra__prices > div,
+.product_reader__sidepanel__formation_indiv__prices > div,
+.product_reader__sidepanel__formation_intra__prices > div
+{
+	font-size: 0.8em;
+	border: 1px solid color(greylight2); /* green-light ish */
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.product_reader__sidepanel__separator{
+	background-color: color(greylight3);
+	height:2px;
+	width:100%;
+	margin: 1em 0;
+}
+
+.product_reader__sidepanel .sidepanel .sidepanel__close{
+	background-color: red;
+	color: white;
+	border-radius: 20px;
+	font-size: 0.8rem;
+	height: 1.25em;
+	width: 1.25em;
+	line-height: 1.25em;
+}
+.product_reader .sidepanel .sidepanel__content{
+	padding:1em;
+}
+.product_reader__sidepanel__separator{
+	margin: 2em 0;
+	height:2px;
+	width:100%;
+}
+.product_reader__sidepanel__formation_indiv__title::before,
+.product_reader__sidepanel__formation_intra__title::before{
+	content: '\25B6';
+}
+.product_reader .sidepanel .btn{
+	display: block;
+	border-radius: 20px;
+}
+
+.product_reader__teachers{
+	text-align: center;
+	padding:2em;
+}
+.product_reader__teachers__title{
+	font-size:2em;
+	font-weight: bold;
+	margin-bottom: 1em;
+}
+.product_reader__teachers__subtitle{
+	font-size:0.8em;
+	margin-bottom: 2em;
+}
+.product_reader__teachers__separator{
+	height: 5px;
+	width: 100px;
+	background-color: color(valhalla); /* blue-dark */
+	margin: auto;
+	margin-bottom: 2em;
+}
+
+.product_reader__teachers__teacher_picture{
+	width:200px;
+	height:200px;
+	border-radius: 10px;
+	background-color: grey;
+	margin: auto;
+}
+.product_reader__teachers__teacher_name{
+	font-weight: bold;
+	margin-top: 1em;
+}
+
+.product_reader__reviews{
+	padding: 2em;
+	background-color: color(valhalla); /* blue-dark */
+}
+.product_reader__reviews__title{
+	color:white;
+	text-align: center;
+	font-size:2em;
+	font-weight: bold;
+	margin-bottom: 1em;
+}
+
+.product_reader__faq{
+	background-color: grey;
+	padding: 2em;
+}
+.product_reader__faq__head{
+	text-align: center;
+}
+.product_reader__faq__title{
+	color: color(meadow); /* blue-green */
+	font-size: 1.2em;
+}
+.product_reader__faq__subtitle_1{
+	font-size: 2em;
+}
+.product_reader__faq__subtitle_2{
+	margin: 2em 0;
+}
+
+.product_reader__contact,
+.product_reader__contact__big{
+	background-color: color(salmon); /* salmon */
+	text-align: center;
+	padding: 2em;
+}
+
+.product_reader__contact{
+	border-radius: 10px;
+}
+
+.product_reader__contact a,
+.product_reader__contact__big a{
+	border-radius: 50px;
+	padding: 10px 1em;
+}
+
+.product_reader__bottom{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	background-color: color(valhalla); /* blue-dark */
+	z-index: 3000;
+	text-align: center;
+	padding:1em;
+}
+
+.product_reader__bottom .btn{
+	background-color: color(meadow); /* blue-green */
+	border:none;
+	border-radius: 20px;
+	display: block;
+}
+
+.product_reader__bottom .bookmark{
+	display: inline-block;
+	margin: auto;
+	background-color: color(salmon); /* salmon */
+	color: white;
+	text-transform: uppercase;
+	padding: 10px 1em;
+	border-radius: 50px;
+	text-decoration: none;
+	margin-right: 1em;
+}
+.product_reader__bottom .share{
+	display: inline-block;
+	margin: auto;
+	background-color: color(purple); /* purple */
+	color: white;
+	text-transform: uppercase;
+	padding: 10px 1em;
+	border-radius: 50px;
 	text-decoration: none;
 }
