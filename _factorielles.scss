@@ -856,6 +856,14 @@ $heightMain : 1.85em;
 	border-radius:5px;
 }
 /***************************************/
+/* n00bs - override */
+/***************************************/
+.block-std{
+	border-radius: 10px;
+	box-shadow: none;
+	-webkit-box-shadow:none;
+}
+/***************************************/
 /* n00bs - my account */
 /***************************************/
 .mod_facAccountMenu,
@@ -868,7 +876,6 @@ $heightMain : 1.85em;
 {
 	background-color: white;
 	padding: 20px;
-	border-radius:5px;
 	margin-bottom: 10px;
 }
 
@@ -1058,7 +1065,7 @@ $heightMain : 1.85em;
 	background-color: color(greenlight);
 	font-size: 0.8em;
 	border-radius: 20px;
-	padding:3px;
+	padding:3px 8px;
 }
 .fac_account_next_event_details__texts{
 
@@ -1080,7 +1087,7 @@ $heightMain : 1.85em;
 	background-color: color(greenlight);
 	font-size: 0.8em;
 	border-radius: 20px;
-	padding:3px;
+	padding:3px 8px;
 }
 .fac_account_next_event_details__teachers__title{
 	font-weight: bold;
@@ -1370,7 +1377,7 @@ $heightMain : 1.85em;
 	background-color: color(greenlight);
 	font-size: 0.8em;
 	border-radius: 20px;
-	padding:3px;
+	padding:3px 8px;
 }
 .fac_calendar_item.past .fac_calendar_item__dates__duration{
 	background-color: gray;
@@ -1406,7 +1413,7 @@ $heightMain : 1.85em;
 	background-color: color(greenlight);
 	font-size: 0.8em;
 	border-radius: 20px;
-	padding:3px;
+	padding:3px 8px;
 }
 
 .fac_calendar_item.past .fac_calendar_item__texts__tags__tag{
@@ -1574,7 +1581,6 @@ $heightMain : 1.85em;
 .product_reader__top{
 	background-color: white;
 	padding:1.5em;
-	border-radius: 10px;
 }
 .product_reader__top__tag,
 .product_reader__sidepanel__tag{
@@ -1618,7 +1624,6 @@ $heightMain : 1.85em;
 {
 	background-color: white;
 	padding:10px;
-	border-radius: 10px;
 }
 
 .product_reader__block__icon{
@@ -1636,7 +1641,6 @@ $heightMain : 1.85em;
 	color: white;
 	background-color: color(turquoise); /* turquoise */
 	padding:10px;
-	border-radius: 10px;
 }
 .product_reader__block_programm a{
 	color: white;
@@ -1814,10 +1818,6 @@ $heightMain : 1.85em;
 	background-color: color(salmon); /* salmon */
 	text-align: center;
 	padding: 2em;
-}
-
-.product_reader__contact{
-	border-radius: 10px;
 }
 
 .product_reader__contact a,
