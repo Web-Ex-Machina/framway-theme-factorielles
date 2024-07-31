@@ -1610,8 +1610,8 @@ $heightMain : 1.85em;
 }
 
 .product_reader__block,
-.product_reader__formation_intra,
-.product_reader__formation_indiv,
+:not(.sidepanel__content) > .addtocart__formation_intra,
+:not(.sidepanel__content) > .addtocart__formation_indiv,
 .product_reader__testimonies,
 .product_reader__free_content,
 .product_reader__teachers
@@ -1686,33 +1686,27 @@ $heightMain : 1.85em;
 	padding: 10px;
 }
 
-.product_reader__formation_indiv .btn,
-.product_reader__formation_intra .btn
+.addtocart__formation_indiv .btn,
+.addtocart__formation_intra .btn
 {
 	border-radius: 25px;
 }
 
-.product_reader__formation_indiv__reference,
-.product_reader__formation_intra__reference,
-.product_reader__sidepanel__formation_indiv__reference,
-.product_reader__sidepanel__formation_intra__reference
+.addtocart__formation_indiv__reference,
+.addtocart__formation_intra__reference
 {
 	background-color: color(greenlight4); /* green-light */
 	padding: 0.5em;
 	font-size: 0.8em;
 	border-radius: 10px;
 }
-.product_reader__formation_indiv__prices,
-.product_reader__formation_intra__prices,
-.product_reader__sidepanel__formation_indiv__prices,
-.product_reader__sidepanel__formation_intra__prices
+.addtocart__formation_indiv__prices,
+.addtocart__formation_intra__prices
 {
 	margin-top: 10px;
 }
-.product_reader__formation_indiv__prices > div,
-.product_reader__formation_intra__prices > div,
-.product_reader__sidepanel__formation_indiv__prices > div,
-.product_reader__sidepanel__formation_intra__prices > div
+.addtocart__formation_indiv__prices > div,
+.addtocart__formation_intra__prices > div
 {
 	font-size: 0.8em;
 	border: 1px solid color(greylight2); /* green-light ish */
@@ -1720,11 +1714,12 @@ $heightMain : 1.85em;
 	padding: 10px;
 }
 
-.product_reader__sidepanel__separator{
+.product_reader__sidepanel__separator,
+.addtocart__separator{
 	background-color: color(greylight3);
+	margin: 2em 0;
 	height:2px;
 	width:100%;
-	margin: 1em 0;
 }
 
 .product_reader__sidepanel .sidepanel .sidepanel__close{
@@ -1739,15 +1734,12 @@ $heightMain : 1.85em;
 .product_reader .sidepanel .sidepanel__content{
 	padding:1em;
 }
-.product_reader__sidepanel__separator{
-	margin: 2em 0;
-	height:2px;
-	width:100%;
-}
-.product_reader__sidepanel__formation_indiv__title::before,
-.product_reader__sidepanel__formation_intra__title::before{
+
+.sidepanel__content .addtocart__formation_indiv__title::before,
+.sidepanel__content .addtocart__formation_intra__title::before{
 	content: '\25B6';
 }
+
 .product_reader .sidepanel .btn{
 	display: block;
 	border-radius: 20px;
@@ -1780,6 +1772,7 @@ $heightMain : 1.85em;
 	border-radius: 10px;
 	background-color: grey;
 	margin: auto;
+	overflow: hidden;
 }
 .product_reader__teachers__teacher_name{
 	font-weight: bold;
