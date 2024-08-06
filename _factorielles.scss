@@ -860,9 +860,13 @@ $heightMain : 1.85em;
 /***************************************/
 .block-std{
 	border-radius: 10px;
+}
+
+.no-shadow{
 	box-shadow: none;
 	-webkit-box-shadow:none;
 }
+
 /***************************************/
 /* n00bs - my account */
 /***************************************/
@@ -1637,12 +1641,12 @@ $heightMain : 1.85em;
 
 }
 
-.product_reader__block_programm{
+.product_reader__block_productsheet{
 	color: white;
 	background-color: color(turquoise); /* turquoise */
 	padding:10px;
 }
-.product_reader__block_programm a{
+.product_reader__block_productsheet a{
 	color: white;
 }
 
@@ -1864,4 +1868,32 @@ $heightMain : 1.85em;
 	padding: 10px 1em;
 	border-radius: 50px;
 	text-decoration: none;
+}
+
+/***************************************/
+/* n00bs - courses */
+/***************************************/
+.mod_fac_account_menu a,
+.mod_fac_account_menu a:hover
+{
+	text-decoration: none;
+}
+.mod_fac_account_menu a.active
+{
+	// color: color(greendark);
+	font-weight: bold;
+}
+
+.mod_fac_account_menu li
+{
+	margin-right: 1em;
+}
+
+.mod_fac_account_menu a.catalogue_formations
+{
+	color:white;
+	background-color: color(purple);
+	border-radius: 30px;
+	border:none;
+	padding: 10px 1em;
 }
