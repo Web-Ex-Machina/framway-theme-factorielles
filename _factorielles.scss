@@ -1873,27 +1873,95 @@ $heightMain : 1.85em;
 /***************************************/
 /* n00bs - courses */
 /***************************************/
-.mod_fac_account_menu a,
-.mod_fac_account_menu a:hover
+.mod_fac_course_menu a,
+.mod_fac_course_menu a:hover
 {
 	text-decoration: none;
 }
-.mod_fac_account_menu a.active
+.mod_fac_course_menu a.active
 {
 	// color: color(greendark);
 	font-weight: bold;
 }
 
-.mod_fac_account_menu li
+.mod_fac_course_menu li
 {
 	margin-right: 1em;
 }
 
-.mod_fac_account_menu a.catalogue_formations
+.mod_fac_course_menu a.catalogue_formations
 {
 	color:white;
 	background-color: color(purple);
 	border-radius: 30px;
 	border:none;
 	padding: 10px 1em;
+}
+
+.mod_fac_course_search{
+
+}
+
+.mod_fac_course_search input[type="search"]{
+	border: none;
+}
+.mod_fac_course_search button{
+	padding: 0 1em;
+}
+.fac_product_list > .product{
+	flex: 1;
+}
+.iso_list_product{
+	font-size: 0.8em;
+	padding: 10px;
+}
+.iso_list_product__title{
+	height:100px;
+}
+.iso_list_product__figure{
+	height:100px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.iso_list_product__figure figure{
+	height:100%;
+}
+
+.iso_list_product__figure figure img{
+	object-fit: cover;
+	height:100%;
+}
+.iso_list_product__tags{
+	margin-top:-2.25em;
+	margin-bottom: 1em;
+	padding: 0 0.5em;
+}
+.iso_list_product__content__themes__theme{
+	border-radius: 20px;
+	font-size: 0.8em;
+	padding: 0.5em;
+}
+.iso_list_product__content__ratings{
+	color: white;
+	background-color: color(greendark);
+	border-radius: 10px;
+	padding:5px;
+	font-size: 0.8em;
+	text-align:right;
+}
+.iso_list_product__text{
+	display: flex;
+	border-top:1px solid black;
+	border-bottom:1px solid black;
+	margin-top: 0.2em;
+	margin-bottom: 0.2em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	color:gray;
+	font-size: 0.8em;
+}
+.iso_list_product__button a{
+	width:100%;
+	border-radius: 10px !important;
+	border:none !important;
 }
