@@ -1586,12 +1586,12 @@ $heightMain : 1.85em;
 	background-color: white;
 	padding:1.5em;
 }
-.product_reader__top__tag,
-.product_reader__sidepanel__tag{
+.product_reader__top__theme,
+.product_reader__sidepanel__theme{
 	margin-right: 10px;
 }
-.product_reader__top__tag > div,
-.product_reader__sidepanel__tag > span{
+.product_reader__top__theme > div,
+.product_reader__sidepanel__theme > span{
 	border-radius: 50px;
 	padding: 5px 1em;
 	text-transform: uppercase;
@@ -1908,12 +1908,11 @@ $heightMain : 1.85em;
 .mod_fac_course_search button{
 	padding: 0 1em;
 }
-.fac_product_list > .product{
-	flex: 1;
-}
+
 .iso_list_product{
 	font-size: 0.8em;
 	padding: 10px;
+	height: 100%;
 }
 .iso_list_product__title{
 	height:100px;
@@ -1964,4 +1963,11 @@ $heightMain : 1.85em;
 	width:100%;
 	border-radius: 10px !important;
 	border:none !important;
+}
+
+.fac_theme,
+.fac_tag{
+	border-radius: 20px;
+	font-size: 0.8em;
+	padding: 0.5em;
 }
