@@ -8,8 +8,9 @@ module.exports = {
 		'vine': '#c23854',
 		'greylighter' : '#F4F4F8',
 		'tertiary': '#FA7555',
+
 		// n00bs colors - my account
-		'greylight':'#F5F8FD',
+		// 'greylight':'#F5F8FD',
 		'greendark':'#08534B',
 		'greenmiddle':' #39988D',
 		'greenlight':'#ABE8E1',
