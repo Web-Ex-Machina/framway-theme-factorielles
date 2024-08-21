@@ -1641,7 +1641,7 @@ $heightMain : 1.85em;
 
 .product_reader__block_productsheet{
 	color: white;
-	background-color: Hsl(from color(spindle) h s calc(l + 20)); /* turquoise */
+	background-color: Hsl(from color(meadow) h calc(s - 38) calc(l + 10)); /* turquoise */
 	padding:10px;
 }
 .product_reader__block_productsheet a{
@@ -1664,7 +1664,7 @@ $heightMain : 1.85em;
 	border-radius: 10px;
 }
 .product_reader__block.objectifs .objectifs__title__first_letter {
-	border-bottom: 5px solid Hsl(from color(spindle) h s calc(l + 20)); /* turquoise */
+	border-bottom: 5px solid Hsl(from color(meadow) h calc(s - 38) calc(l + 10)); /* turquoise */
 }
 
 .product_reader__block.thematique .theme{
