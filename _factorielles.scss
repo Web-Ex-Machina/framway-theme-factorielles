@@ -1905,7 +1905,9 @@ $heightMain : 1.85em;
 	%btn{
 		--btn-radius       : 50px;
 		--btn-border-color : var(--btn-background);
-		&.squared{--btn-radius: 6px;}
+		&.squared{--btn-radius: 6px;
+    		&:is(.btn-sm){padding: 0.45em;}
+		}
 	}
 
 	.mod_iso_productfilter{
@@ -1935,20 +1937,28 @@ $heightMain : 1.85em;
 .block-card[data-preset=formation]{
 	--theme: var(--primary);
 	--theme-inv : hwb(from var(--theme) calc(h + 0) calc(w + 75) calc(b - 100));
+	--theme-font : var(--theme-inv);
 	padding: 10px; border: 1px solid color(greylight); font-size: 0.8em; border-radius: 6px;
 	.block-card__figure{ border-radius: 4px;
 		.block-card__headline{padding:  0.75em; opacity: 1; gap: 1em;}
-		.tag{padding: 0.35em 0.75em; margin: 0; border-radius: 50px;
-			         background: var(--theme); color:       color(white); 
-			&.theme {color:      var(--theme); background:  var(--theme-inv);  @include ellipsis();}
-			&.rating{background: var(--theme); color:       color(white); white-space: nowrap; flex-shrink: 0;}
+		.tag{padding: 0.35em 1em; margin: 0; border-radius: 50px; font-size: 0.85em;
+			         background: var(--theme); color:      var(--theme-font); 
+			&.theme {background: var(--theme); color:      var(--theme-font); @include ellipsis(); font-size: 0.8em; padding: .6em 1em; letter-spacing: 0.15ch; text-transform: uppercase;}
+			&.rating{color:      var(--theme); background: var(--theme-font); white-space: nowrap; flex-shrink: 0;}
 		}
 	} 
 	.block-card__content{padding-top: 1em; display: flex; flex-direction: column; justify-content: space-between; gap: 1em;}
 	.block-card__title{line-height: 1.4; flex-grow: 1;}
 	.block-card__text{flex-grow: 0; display: flex;gap: 1em; justify-content: space-between; padding: 10px 0;border-top: 1px solid color(greylight);border-bottom: 1px solid color(greylight); font-size: 0.8em;}
 	.iso_list_product__button{
-		%btn{width:100%; --btn-radius: 6px; --btn-background: var(--theme); --btn-font-color: var(--theme-inv); }
+		%btn{width:100%; --btn-radius: 6px; --btn-background: var(--theme-font); --btn-font-color: var(--theme);
+			&:hover,&:focus,&:active,&.active{
+			  	--btn-background: Hsl(from var(--theme-font) calc(h + 0) calc(s + 0) calc(l + 5));
+			  	&:is(.hover--darken){
+				  --btn-background: Hsl(from var(--theme-font) calc(h + 0) calc(s + 0) calc(l - 5));
+				}
+			}
+		}
 	}
 }
 
