@@ -3,6 +3,24 @@
   --secondary: #{$secondary};
 }
 
+$greendark:    Hsl(from color(meadow) h s calc(l - 20));
+$greenmiddle:  Hsl(from color(meadow) h calc(s - 35) l);
+$greenlight:   Hsl(from color(meadow) h calc(s - 20) calc(l + 40));
+$greenlight2:  Hsl(from color(meadow) h calc(s - 50) calc(l + 50));
+$greenlight3:  Hsl(from color(meadow) h calc(s - 50) calc(l + 53));
+$greenlight4:  Hsl(from color(spindle) h s calc(l + 11));
+$greenlighter: Hsl(from color(meadow) h calc(s - 50) calc(l + 58));
+$yellowdark:   Hsl(from color(yellow) h calc(s - 20) calc(l + 35));
+$yellowlight:  Hsl(from color(yellow) h calc(s + 30) calc(l + 35));
+$orangedark:   Hsl(from color(bittersweet) calc(h + 20) s l);
+$orangelight:  Hsl(from color(bittersweet) calc(h + 30) s calc(l + 30));
+$reddark:      Hsl(from color(bittersweet) calc(h + 8) calc(s - 20) calc(l - 18));
+$redlight:     Hsl(from color(bittersweet) calc(h + 8) calc(s - 30) calc(l - 10));
+$turquoise:    Hsl(from color(meadow) h calc(s - 38) calc(l + 10));
+$greylight2:   Hsl(from color(spindle) h calc(s + -30) calc(l + 6));
+$greylight3:   Hwb(from color(spindle) h w calc(b + 9));
+$salmon:       $tertiary;
+
 .ft-playfair{font-family: 'Playfair Display', serif;}
 .ft-futura{font-family: 'Futura PT', serif;}
 
@@ -888,7 +906,7 @@ $heightMain : 1.85em;
 }
 .mod_facAccountMenu a.active
 {
-	color: Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20));
+	color: $greendark;
 	font-weight: bold;
 }
 
@@ -899,8 +917,8 @@ $heightMain : 1.85em;
 
 .mod_facAccountMenu button.submit
 {
-	color:Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20));
-	background-color: Hsl(from color(yellow) calc(h + 0) calc(s - 20) calc(l + 35));
+	color:$greendark;
+	background-color: $yellowdark;
 	border-radius: 20px;
 	border:none;
 }
@@ -912,8 +930,8 @@ $heightMain : 1.85em;
 .fac_account_enrolments__left_icon,
 .fac_block_dashboard__left_icon
 {
-	color:Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20));
-	background-color:Hsl(from color(meadow) calc(h + 0) calc(s - 20) calc(l + 40));
+	color:$greendark;
+	background-color:$greenlight;
 	width: 75px;
 	// height: 75px;
  	aspect-ratio : 1 / 1;
@@ -942,7 +960,7 @@ $heightMain : 1.85em;
 .fac_block_dashboard__title
 {
 	line-height: 1;
-	color:Hsl(from color(meadow) calc(h + 0) calc(s - 20) calc(l + 40));
+	color:$greenlight;
 }
 
 .fac_account_previous_order__right_icon,
@@ -951,7 +969,7 @@ $heightMain : 1.85em;
 .fac_block_dashboard__right_icon
 {
 	color:white;
-	background-color:Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20));
+	background-color:$greendark;
 	width:40px;
  	aspect-ratio : 1 / 1;
 	text-align: center;
@@ -1004,13 +1022,13 @@ $heightMain : 1.85em;
 	flex:1;
 }
 .fac_account_related_products__product__content__themes__theme{
-	background-color: Hsl(from color(meadow) calc(h + 0) calc(s - 20) calc(l + 40));
+	background-color: $greenlight;
 	border-radius: 10px;
 	font-size: 0.8em;
 }
 .fac_account_related_products__product__content__ratings{
 	color: white;
-	background-color: Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20));
+	background-color: $greendark;
 	border-radius: 10px;
 	padding:5px;
 	font-size: 0.8em;
@@ -1035,7 +1053,7 @@ $heightMain : 1.85em;
 }
 .fac_account_related_products__product__button a{
 	width:100%;
-	background-color: Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20)) !important;
+	background-color: $greendark !important;
 	border-radius: 10px !important;
 	border:none !important;
 }
@@ -1047,7 +1065,7 @@ $heightMain : 1.85em;
 .fac_account_next_event_details__separator{
 	margin:auto;
 	width: 80%;
-	border: 1px solid Hsl(from color(meadow) calc(h + 0) calc(s - 20) calc(l + 40));
+	border: 1px solid $greenlight;
 	margin: 1em 0 1em 0;
 }
 .fac_account_next_event_details__dates{
@@ -1064,7 +1082,7 @@ $heightMain : 1.85em;
 
 }
 .fac_account_next_event_details__dates__duration{
-	background-color: Hsl(from color(meadow) calc(h + 0) calc(s - 20) calc(l + 40));
+	background-color: $greenlight;
 	font-size: 0.8em;
 	border-radius: 20px;
 	padding:3px 8px;
@@ -1076,7 +1094,7 @@ $heightMain : 1.85em;
 	text-transform: uppercase;
 }
 .fac_account_next_event_details__texts__row1{
-	color: Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20))
+	color: $greendark
 }
 .fac_account_next_event_details__texts__row2{
 	font-size:0.8em;
@@ -1086,7 +1104,7 @@ $heightMain : 1.85em;
 	column-gap: 1em;
 }
 .fac_account_next_event_details__texts__tags__tag{
-	background-color: Hsl(from color(meadow) calc(h + 0) calc(s - 20) calc(l + 40));
+	background-color: $greenlight;
 	font-size: 0.8em;
 	border-radius: 20px;
 	padding:3px 8px;
@@ -1099,16 +1117,16 @@ $heightMain : 1.85em;
 }
 .fac_account_next_event_details__programm a{
 	width:100%;
-	background-color: Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20)) !important;
+	background-color: $greendark !important;
 	border-radius: 10px !important;
 	border:none !important;
 }
 
 /* fac_account_satisfaction_surveys */
 .fac_account_satisfaction_surveys__content__warning{
-	color: Hsl(from color(bittersweet) calc(h + 20) calc(s + 0) calc(l + 0));
-	background-color: Hsl(from color(bittersweet) calc(h + 30) calc(s + 0) calc(l + 30));
-	border: 1px solid Hsl(from color(bittersweet) calc(h + 20) calc(s + 0) calc(l + 0));
+	color: $orangedark;
+	background-color: $orangelight;
+	border: 1px solid $orangedark;
 	border-radius: 5px;
 	width:100%;
 	padding:5px;
@@ -1119,7 +1137,7 @@ $heightMain : 1.85em;
 }
 .fac_account_satisfaction_surveys__content__items__item__participants__participant a{
 	color:white;
-	background-color:Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20));
+	background-color:$greendark;
 	text-align: center;
 	border-radius: 20px;
 	padding: 5px;
@@ -1128,9 +1146,9 @@ $heightMain : 1.85em;
 
 /* fac_account_enrolments */
 .fac_account_enrolments__content__warning{
-	color: Hsl(from color(bittersweet) calc(h + 8) calc(s - 20) calc(l - 18));
-	background-color: Hsl(from color(bittersweet) calc(h + 8) calc(s - 30) calc(l - 10));
-	border: 1px solid Hsl(from color(bittersweet) calc(h + 8) calc(s - 20) calc(l - 18));
+	color: $reddark;
+	background-color: $redlight;
+	border: 1px solid $reddark;
 	border-radius: 5px;
 	width:100%;
 	padding:5px;
@@ -1141,7 +1159,7 @@ $heightMain : 1.85em;
 }
 .fac_account_enrolments__content__items__item__participants__participant a{
 	color:white;
-	background-color:Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20));
+	background-color:$greendark;
 	text-align: center;
 	border-radius: 20px;
 	padding: 5px;
@@ -1160,20 +1178,20 @@ $heightMain : 1.85em;
 
 .mod_iso_orderhistory_fac table.table thead {
 	color: white;
-	background-color: Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20));
+	background-color: $greendark;
 	// border-radius:5px;
 }
 .mod_iso_orderhistory_fac td.product_name{
-	color: Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20));
+	color: $greendark;
 }
 .mod_iso_orderhistory_fac table.table tbody .details .btn-sm{
-	color:  Hsl(from color(yellow) calc(h + 0) calc(s + 30) calc(l + 35));
-	background-color: Hsl(from color(meadow) calc(h + 0) calc(s - 35) calc(l + 0));
+	color:  $yellowlight;
+	background-color: $greenmiddle;
 	border:none;
 }
 .mod_iso_orderhistory_fac table.table tbody .documents_available a{
-	color: Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20));
-	background-color: Hsl(from color(meadow) calc(h + 0) calc(s - 20) calc(l + 40));
+	color: $greendark;
+	background-color: $greenlight;
 	display: inline-block;
 	width:40px;
  	aspect-ratio : 1 / 1;
@@ -1202,7 +1220,7 @@ $heightMain : 1.85em;
 .mod_iso_orderdetails_fac .left-column .separator{
 	margin:auto;
 	width: 80%;
-	border: 1px solid Hsl(from color(meadow) calc(h + 0) calc(s - 50) calc(l + 58));
+	border: 1px solid $greenlighter;
 	margin: 1em 0 1em 0;
 }
 
@@ -1211,7 +1229,7 @@ $heightMain : 1.85em;
 }
 
 .mod_iso_orderdetails_fac .left-column .info_value{
-	color: Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20));
+	color: $greendark;
 	margin-bottom: 20px;
 }
 
@@ -1219,7 +1237,7 @@ $heightMain : 1.85em;
 	margin-bottom: 10px;
 }
 .mod_iso_orderdetails_fac .address_data{
-	background-color: Hsl(from color(meadow) calc(h + 0) calc(s - 50) calc(l + 50));
+	background-color: $greenlight2;
 	border-radius: 10px;
 	padding: 20px;
 }
@@ -1243,12 +1261,12 @@ $heightMain : 1.85em;
 	background-color: white;
 	border-radius: 20px;
 	padding: 20px;
-	border: 1px solid Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20));
+	border: 1px solid $greendark;
 }
 
 .mod_iso_orderdetails_fac .method_payment__left_icon{
 	color:white;
-	background-color:Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20));
+	background-color:$greendark;
 	font-size: 0.8em;
 	width:25px;
  	aspect-ratio : 1 / 1;
@@ -1262,7 +1280,7 @@ $heightMain : 1.85em;
 
 }
 .mod_iso_orderdetails_fac .method_payment__right_icon{
-	background-color: Hsl(from color(meadow) calc(h + 0) calc(s - 20) calc(l + 40));
+	background-color: $greenlight;
 	padding: 10px;
 	border-radius: 10px;
 }
@@ -1274,7 +1292,7 @@ $heightMain : 1.85em;
 }
 .mod_iso_orderdetails_fac .right-column .buttons a{
 	color:white;
-	background-color: Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20));
+	background-color: $greendark;
 	font-size: 0.8em;
 	border-radius: 2em;
 	padding:10px 20px 10px 20px;
@@ -1298,28 +1316,28 @@ $heightMain : 1.85em;
 .iso_collectiondefault_fac tr.thead{
 	border-radius: 20px;
 	color: white;
-	background-color: Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20));
+	background-color: $greendark;
 }
 
 .iso_collectiondefault_fac tr.thead td{
 	padding: 20px;
 }
 .iso_collectiondefault_fac td .name{
-	color: Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20));
+	color: $greendark;
 }
 .iso_collectiondefault_fac .table-list__line{
 	box-shadow: none;
 }
 
 .iso_collectiondefault_fac tr.subtotal{
-	color: Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20));
-	background-color: Hsl(from color(yellow) calc(h + 0) calc(s - 20) calc(l + 35));
+	color: $greendark;
+	background-color: $yellowdark;
 }
 
 .iso_collectiondefault_fac tr.total{
-	color: Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20)) !important;
-	background-color: Hsl(from color(meadow) calc(h + 0) calc(s - 50) calc(l + 50)) !important;
-	border: 1px solid Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20)) !important;
+	color: $greendark !important;
+	background-color: $greenlight2 !important;
+	border: 1px solid $greendark !important;
 }
 .iso_collectiondefault_fac tr.total td{
 	font-size: 1.2em;
@@ -1351,7 +1369,7 @@ $heightMain : 1.85em;
 }
 
 .mod_fac_calendar .fac_calendar_item .left-column .label{
-	background-color: Hsl(from color(meadow) calc(h + 0) calc(s - 20) calc(l + 40));
+	background-color: $greenlight;
 	text-transform: uppercase;
 	text-align: center;
 	// vertical-align: middle;
@@ -1376,7 +1394,7 @@ $heightMain : 1.85em;
 
 }
 .fac_calendar_item__dates__duration{
-	background-color: Hsl(from color(meadow) calc(h + 0) calc(s - 20) calc(l + 40));
+	background-color: $greenlight;
 	font-size: 0.8em;
 	border-radius: 20px;
 	padding:3px 8px;
@@ -1386,8 +1404,8 @@ $heightMain : 1.85em;
 }
 
 .fac_calendar_item__texts{
-	border-left: 1px solid Hsl(from color(meadow) calc(h + 0) calc(s - 20) calc(l + 40));
-	border-right: 1px solid Hsl(from color(meadow) calc(h + 0) calc(s - 20) calc(l + 40));
+	border-left: 1px solid $greenlight;
+	border-right: 1px solid $greenlight;
 	padding-left: 2em;
 }
 .fac_calendar_item.past .fac_calendar_item__texts{
@@ -1399,7 +1417,7 @@ $heightMain : 1.85em;
 	text-transform: uppercase;
 }
 .fac_calendar_item__texts__row1{
-	color: Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20))
+	color: $greendark
 }
 .fac_calendar_item.past .fac_calendar_item__texts__row1{
 	color: black;
@@ -1412,7 +1430,7 @@ $heightMain : 1.85em;
 	column-gap: 1em;
 }
 .fac_calendar_item__texts__tags__tag{
-	background-color: Hsl(from color(meadow) calc(h + 0) calc(s - 20) calc(l + 40));
+	background-color: $greenlight;
 	font-size: 0.8em;
 	border-radius: 20px;
 	padding:3px 8px;
@@ -1430,7 +1448,7 @@ $heightMain : 1.85em;
 .fac_calendar_item__programm a{
 	width:100%;
 	font-size: 0.8em;
-	background-color: Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20)) !important;
+	background-color: $greendark !important;
 	border-radius: 10px !important;
 	border:none !important;
 }
@@ -1448,7 +1466,7 @@ $heightMain : 1.85em;
 }
 
 .fac_icon_bg_small{
-	color:Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20));
+	color:$greendark;
 	background-color:#DDF6F3;
 	width: 24px;
  	aspect-ratio : 1 / 1;
@@ -1464,26 +1482,26 @@ $heightMain : 1.85em;
 }
 
 .mod_fac_account_informations_connection a{
-	color: Hsl(from color(yellow) calc(h + 0) calc(s + 30) calc(l + 35));
-	background-color:Hsl(from color(meadow) calc(h + 0) calc(s - 35) calc(l + 0));
+	color: $yellowlight;
+	background-color:$greenmiddle;
 	padding: 5px;
 	text-decoration: none;
 	font-size: 0.8em;
 }
 .mod_fac_account_informations_connection a:hover{
-	color: Hsl(from color(yellow) calc(h + 0) calc(s + 30) calc(l + 35));
-	background-color:Hsl(from color(meadow) calc(h + 0) calc(s - 20) calc(l + 40));
+	color: $yellowlight;
+	background-color:$greenlight;
 	text-decoration: none;
 }
 
 /* iso_addressbook_fac */
 .fac_myinformations_addresses{
-	background-color: Hsl(from color(meadow) calc(h + 0) calc(s - 50) calc(l + 53));;
+	background-color: $greenlight3;
 	border-radius: 10px;
 	padding: 20px;
 }
 .fac_myinformations_addresses .title{
-	color: Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20));
+	color: $greendark;
 	margin-bottom: 10px;
 }
 .fac_myinformations_addresses .text{
@@ -1491,8 +1509,8 @@ $heightMain : 1.85em;
 }
 .fac_myinformations_addresses .separator{
 	// margin:auto;
-	// border:1px solid Hsl(from color(meadow) calc(h + 0) calc(s - 50) calc(l + 50));
-	border: 1px solid Hsl(from color(meadow) calc(h + 0) calc(s - 20) calc(l + 40));
+	// border:1px solid $greenlight2;
+	border: 1px solid $greenlight;
 	margin: 1em 0 1em 0;
 }
 
@@ -1503,7 +1521,7 @@ $heightMain : 1.85em;
 	padding: 20px;
 }
 .mod_iso_addessbook_fac__address .address_data .org.fn{
-	color: Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20));
+	color: $greendark;
 	text-transform: uppercase;
 	font-weight: bold;
 }
@@ -1518,15 +1536,15 @@ $heightMain : 1.85em;
 	font-weight: lighter;
 }
 .mod_iso_addessbook_fac__address .address_buttons a{
-	color: Hsl(from color(yellow) calc(h + 0) calc(s + 30) calc(l + 35));
-	background-color:Hsl(from color(meadow) calc(h + 0) calc(s - 35) calc(l + 0));
+	color: $yellowlight;
+	background-color:$greenmiddle;
 	padding: 5px;
 	text-decoration: none;
 	font-size: 0.8em;
 }
 .mod_iso_addessbook_fac__address .address_buttons a:hover{
-	color: Hsl(from color(yellow) calc(h + 0) calc(s + 30) calc(l + 35));
-	background-color:Hsl(from color(meadow) calc(h + 0) calc(s - 20) calc(l + 40));
+	color: $yellowlight;
+	background-color:$greenlight;
 	text-decoration: none;
 	border:none;
 }
@@ -1537,7 +1555,7 @@ $heightMain : 1.85em;
 	padding: 20px;
 }
 .mod_fac_account_informations_personaldata .title{
-	color: Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20));
+	color: $greendark;
 	margin-bottom: 10px;
 }
 .mod_fac_account_informations_personaldata .text{
@@ -1545,19 +1563,19 @@ $heightMain : 1.85em;
 }
 .mod_fac_account_informations_personaldata .separator{
 	// margin:auto;
-	// border:1px solid Hsl(from color(meadow) calc(h + 0) calc(s - 50) calc(l + 50));
-	border: 1px solid Hsl(from color(meadow) calc(h + 0) calc(s - 20) calc(l + 40));
+	// border:1px solid $greenlight2;
+	border: 1px solid $greenlight;
 	margin: 1em 0 1em 0;
 }
 .fac_myinformations_personaldata{
 	padding: 20px;
 	border-radius: 10px;
-	border: 1px solid Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20));
+	border: 1px solid $greendark;
 	font-size: 0.8em;
 }
 
 .fac_myinformations_personaldata .company{
-	color: Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20));
+	color: $greendark;
 	margin-left: 1em;
 }
 .fac_myinformations_personaldata .contact{
@@ -1565,15 +1583,15 @@ $heightMain : 1.85em;
 }
 
 .fac_myinformations_personaldata a{
-	color: Hsl(from color(yellow) calc(h + 0) calc(s + 30) calc(l + 35));
-	background-color:Hsl(from color(meadow) calc(h + 0) calc(s - 35) calc(l + 0));
+	color: $yellowlight;
+	background-color:$greenmiddle;
 	padding: 5px;
 	text-decoration: none;
 	font-size: 0.8em;
 }
 .fac_myinformations_personaldata a:hover{
-	color: Hsl(from color(yellow) calc(h + 0) calc(s + 30) calc(l + 35));
-	background-color:Hsl(from color(meadow) calc(h + 0) calc(s - 20) calc(l + 40));
+	color: $yellowlight;
+	background-color:$greenlight;
 	text-decoration: none;
 }
 
@@ -1641,7 +1659,7 @@ $heightMain : 1.85em;
 
 .product_reader__block_productsheet{
 	color: white;
-	background-color: Hsl(from color(meadow) h calc(s - 38) calc(l + 10)); /* turquoise */
+	background-color: $turquoise; /* turquoise */
 	padding:10px;
 }
 .product_reader__block_productsheet a{
@@ -1664,7 +1682,7 @@ $heightMain : 1.85em;
 	border-radius: 10px;
 }
 .product_reader__block.objectifs .objectifs__title__first_letter {
-	border-bottom: 5px solid Hsl(from color(meadow) h calc(s - 38) calc(l + 10)); /* turquoise */
+	border-bottom: 5px solid $turquoise; /* turquoise */
 }
 
 .product_reader__block.thematique .theme{
@@ -1672,7 +1690,7 @@ $heightMain : 1.85em;
 	font-weight: bold;
 }
 .product_reader__block.thematique .tabs .tabs__nav{
-	border: 1px solid Hsl(from color(spindle) h calc(s + -30) calc(l + 6)); /* lightgrey */
+	border: 1px solid $greylight2; /* lightgrey */
 	border-radius: 10px;
 	padding: 5px;
 }
@@ -1684,10 +1702,10 @@ $heightMain : 1.85em;
 	border:none;
 }
 .product_reader__block.thematique .tabs .tabs__nav [type="button"].active{
-	background-color:Hsl(from color(spindle) h calc(s + -30) calc(l + 6)); /* lightgrey */
+	background-color:$greylight2; /* lightgrey */
 }
 .product_reader__block.thematique .tabs .tabs__content{
-	border: 1px solid Hsl(from color(spindle) h calc(s + -30) calc(l + 6)); /* lightgrey */
+	border: 1px solid $greylight2; /* lightgrey */
 	border-radius: 4px;
 	padding: 10px;
 }
@@ -1701,7 +1719,7 @@ $heightMain : 1.85em;
 .addtocart__formation_indiv__reference,
 .addtocart__formation_intra__reference
 {
-	background-color: Hsl(from color(spindle) calc(h + 0) calc(s + 0) calc(l + 11));; /* green-light */
+	background-color: $greenlight4; /* green-light */
 	padding: 0.5em;
 	font-size: 0.8em;
 	border-radius: 10px;
@@ -1715,14 +1733,14 @@ $heightMain : 1.85em;
 .addtocart__formation_intra__prices > div
 {
 	font-size: 0.8em;
-	border: 1px solid Hsl(from color(spindle) h calc(s + -30) calc(l + 6)); /* green-light ish */
+	border: 1px solid $greylight2; /* green-light ish */
 	border-radius: 10px;
 	padding: 10px;
 }
 
 .product_reader__sidepanel__separator,
 .addtocart__separator{
-	background-color: Hwb(from color(spindle) calc(h + 0) calc(w + 0) calc(b + 9));;
+	background-color: $greylight3;
 	margin: 2em 0;
 	height:2px;
 	width:100%;
@@ -1936,7 +1954,7 @@ $heightMain : 1.85em;
 
 .block-card[data-preset=formation]{
 	--theme: var(--primary);
-	--theme-inv : hwb(from var(--theme) calc(h + 0) calc(w + 75) calc(b - 100));
+	--theme-inv : hwb(from var(--theme) h calc(w + 75) calc(b - 100));
 	--theme-font : var(--theme-inv);
 	padding: 10px; border: 1px solid color(greylight); font-size: 0.8em; border-radius: 6px;
 	.block-card__figure{ border-radius: 4px;
@@ -1953,9 +1971,9 @@ $heightMain : 1.85em;
 	.iso_list_product__button{
 		%btn{width:100%; --btn-radius: 6px; --btn-background: var(--theme-font); --btn-font-color: var(--theme);
 			&:hover,&:focus,&:active,&.active{
-			  	--btn-background: Hsl(from var(--theme-font) calc(h + 0) calc(s + 0) calc(l + 5));
+			  	--btn-background: Hsl(from var(--theme-font) h s calc(l + 5));
 			  	&:is(.hover--darken){
-				  --btn-background: Hsl(from var(--theme-font) calc(h + 0) calc(s + 0) calc(l - 5));
+				  --btn-background: Hsl(from var(--theme-font) h s calc(l - 5));
 				}
 			}
 		}
@@ -1972,7 +1990,7 @@ $heightMain : 1.85em;
 
 // 		.iso_list_product__tags{margin-top:-2.25em; margin-bottom: 1em; padding: 0 0.5em; }
 // 		.iso_list_product__content__themes__theme{border-radius: 20px; font-size: 0.8em; padding: 0.5em; }
-// 		.iso_list_product__content__ratings{color: white; background-color: Hsl(from color(meadow) calc(h + 0) calc(s + 0) calc(l - 20)); border-radius: 10px; padding:5px; font-size: 0.8em; text-align:right; }
+// 		.iso_list_product__content__ratings{color: white; background-color: $greendark; border-radius: 10px; padding:5px; font-size: 0.8em; text-align:right; }
 // 		.iso_list_product__text{display: flex; border-top:1px solid black; border-bottom:1px solid black; margin-top: 0.2em; margin-bottom: 0.2em; padding-top: 0.2em; padding-bottom: 0.2em; color:gray; font-size: 0.8em; }
 // 		.iso_list_product__button{
 // 			a{width:100%; border-radius: 10px !important; border:none !important; }
