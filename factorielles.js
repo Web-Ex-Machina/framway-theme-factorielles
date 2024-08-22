@@ -35,6 +35,31 @@ $(function(){
     $cta.find('.btn-icon').wrapAll('<div></div>');
     $('#header .headerFW__nav__panel>ul').first().append($cta)
 
+    // FORMATIONS - start
+    $('.mod_iso_productfilter.isMulti').each(function(){
+        if ($(this).find('.filters__section').length) {
+            $(this).addClass('hasMulti');
+        }
+    });
+
+    $('body').on('click', '.filters__pagination .arrow', function(e) {
+        let direction = $(this).data('direction');
+        let current = $(this).closest('.mod_iso_productfilter').find('.filters__section.active');
+        $('.filters__section').removeClass('active');
+        if (direction == "prev") 
+            current.prev().addClass('active');
+        else if (direction == "next") 
+            current.next().addClass('active');
+        
+        current = $('.filters__section.active');
+        $('.filters__pagination .arrow').removeClass('disabled');
+        if (!current.prev().length)
+            $('.filters__pagination .arrow[data-direction=prev]').addClass('disabled')
+        if (!current.next().length)
+            $('.filters__pagination .arrow[data-direction=next]').addClass('disabled')
+    });
+
+    // FORMATIONS - end
     
 	init();
 });
