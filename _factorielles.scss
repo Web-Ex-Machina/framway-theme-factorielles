@@ -1833,18 +1833,6 @@ $heightMain : 1.85em;
 	margin: 2em 0;
 }
 
-.product_reader__contact,
-.product_reader__contact__big{
-	background-color: $tertiary; /* salmon */
-	text-align: center;
-	padding: 2em;
-}
-
-.product_reader__contact a,
-.product_reader__contact__big a{
-	border-radius: 50px;
-	padding: 10px 1em;
-}
 
 .product_reader__bottom{
 	position: fixed;
@@ -1886,18 +1874,6 @@ $heightMain : 1.85em;
 	text-decoration: none;
 }
 
-/***************************************/
-/* n00bs - courses */
-/***************************************/
-
-.mod_fac_course_search input[type="search"]{
-	border: none;
-}
-.mod_fac_course_search button{
-	padding: 0 1em;
-}
-
-
 
 // PGM
 // FORMATIONS STYLES
@@ -1906,6 +1882,7 @@ $heightMain : 1.85em;
 	--btn-p-y: 0.35em;
 	--btn-p-x: 0.75em;
 	--btn-line-height: 1.2;
+	letter-spacing: 0.15ch; text-transform: uppercase; font-size: 0.8em;
 }
 .formations{
 	&:is(body){background-color: color(greylighter);}
@@ -1921,7 +1898,7 @@ $heightMain : 1.85em;
 	}
 
 	%btn{
-		--btn-radius       : 50px;
+		--btn-radius       : 50em;
 		--btn-border-color : var(--btn-background);
 		&.squared{--btn-radius: 6px;
     		&:is(.btn-sm){padding: 0.45em;}
@@ -1929,8 +1906,34 @@ $heightMain : 1.85em;
 	}
 
 	.mod_iso_productfilter{
-		.filters__wrapper{overflow-x: scroll;overflow-y: hidden;padding: 10px 0;scrollbar-width: thin;}
-		.filters{margin-bottom: 0;width: max-content; font-size: 0.8em; display: flex; gap: 0.5em;}
+		.filters__wrapper{font-size: 0.8em; }
+		.filters{ margin-bottom: 0;}
+		&.isScroll{
+			.filters__wrapper{overflow-x: scroll;overflow-y: hidden;padding: 10px 0;scrollbar-width: thin; display: block;}
+			.filters{width: max-content; display: flex; gap: 8px;}
+		}
+		&.isMulti{
+			.filters__section{ display: flex; flex-wrap: wrap; gap: 5px 8px;
+				&:not(.active){display: none;}
+			}
+			&.hasMulti{
+				.filters__pagination{display: flex;}
+			}
+		}
+		.filters__pagination{display: none; gap: 5px;
+			.arrow{cursor: pointer; transition: all 0.4s; opacity: 0.8;
+				&.disabled{pointer-events: none; opacity: 0.3;}
+				&:hover{opacity: 1; color: link(font-color-hover);}
+			}
+		}
+	}
+
+	.ce_ctacontact{background: $tertiary; padding: clamp($spacing*2, 5vw, 300px) $spacing*2; text-align: center;
+		p{font-size: 1.2em; max-width: 700px; margin-inline: auto; margin-bottom: 1em;}
+	}
+
+	.mod_eventlist{
+		.block-card__container{gap: 10px;}
 	}
 }
 
@@ -1944,7 +1947,7 @@ $heightMain : 1.85em;
 }
 
 // COURSES
-.mod_fac_course_menu{
+.mod_fac_course_menu{ padding: 0.65em 1em;
 	a{text-decoration: none; color:	rgba(link(font-color),0.8); font-weight: 300;
 		&:hover{text-decoration: none;}
 		&.active{color:	link(font-color); font-weight: 400;}
@@ -1952,6 +1955,19 @@ $heightMain : 1.85em;
 	li {margin-right: 1em; }
 }
 
+.block-card[data-preset=formation_event]{
+	--theme: var(--primary);
+	--theme-inv : hwb(from var(--theme) h calc(w + 75) calc(b - 100));
+	--theme-font : var(--theme-inv);
+	padding: 10px; border: 1px solid color(greylight); font-size: 0.7em; border-radius: 6px; margin-bottom: 0;
+	.block-card__content{display: flex; gap: 1em; flex-direction: row; flex-wrap: nowrap; align-items: center; line-height: 1.35;}
+	.block-card__text{margin: 0; @include multi-ellipsis(1em,1.35,2);}
+	.event__time{display: flex; flex-direction: column; text-align: center; background: var(--theme); color: var(--theme-font); border-radius: 4px; justify-content: center; align-content: center; aspect-ratio: 1; height: 55px;
+		span{line-height: 1.05; display: flex;justify-content: center;}
+	}
+	.event__theme{ text-transform: uppercase; font-size: 0.8em; font-weight: 300; text-align: center;}
+	.event__actions{font-size: 2em; padding: 0 3px;}
+}
 .block-card[data-preset=formation]{
 	--theme: var(--primary);
 	--theme-inv : hwb(from var(--theme) h calc(w + 75) calc(b - 100));
@@ -1979,6 +1995,14 @@ $heightMain : 1.85em;
 		}
 	}
 }
+
+.mod_fac_course_search{padding: 0.5em;
+	input[type="search"]{border: none;}
+	button{padding: 0 1em; }
+}
+
+
+
 
 // .iso_list_product{
 // 	&.iso_list_formations{font-size: 0.8em; padding: 10px; height: 100%;
