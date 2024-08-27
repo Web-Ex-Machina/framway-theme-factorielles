@@ -25,13 +25,8 @@ $salmon:       $tertiary;
 .ft-futura{font-family: 'Futura PT', serif;}
 
 body{@extend .ft-futura;}
-.container{
-	@include media-min(xs){max-width: 540px;}
-	@include media-min(sm){max-width: 720px;}
-	@include media-min(md){max-width: 960px;}
-	@include media-min(lg){max-width: 1140px;}
-	@include media-min(xl){max-width: 1680px;}
-}
+.container-fluid,
+.container{ padding: 0 $spacing*1.5; }
 h1,.h1{@extend .ft-playfair; text-transform: none; font-weight: bold;}
 h2,.h2{font-size: 2rem;}
 .heroFW[class*="title--"]{

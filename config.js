@@ -51,6 +51,14 @@ module.exports = {
 		'uppercase': false,
 		'font-weight': 400,
 	},
+	'container':{
+		'xl'  : '1680px',
+		'lg'  : '1140px',
+		'md'  : '960px',
+		'sm'  : '720px',
+		'xs'  : '540px',
+		'xxs' : '100%',
+	},
 	// 'input-invalid': {
 	// 	'border-color': 'input(border-color)',
 	// },
