@@ -26,7 +26,9 @@ $salmon:       $tertiary;
 
 body{@extend .ft-futura;}
 .container-fluid,
-.container{ padding: 0 $spacing*1.5; }
+.container{ padding: 0 $spacing*1.5;
+	>.counter-x{margin-inline: -$spacing*1.5 !important;}
+}
 h1,.h1{@extend .ft-playfair; text-transform: none; font-weight: bold;}
 h2,.h2{font-size: 2rem;}
 .heroFW[class*="title--"]{
