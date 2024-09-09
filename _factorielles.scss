@@ -2113,16 +2113,42 @@ $heightMain : 1.85em;
 	}
 }
 
-.tag{
-	padding: 0.35em 1em; margin: 0; border-radius: var(--radius-full); font-size: 0.85em;
-	         background: var(--theme); color:      var(--theme-font); 
-	&.theme {background: var(--theme); color:      var(--theme-font); @include ellipsis(); font-size: 0.8em; padding: .6em 1em; letter-spacing: 0.15ch; text-transform: uppercase;}
-	&.rating{color:      var(--theme); background: var(--theme-font); white-space: nowrap; flex-shrink: 0;}
-}
-
 .mod_fac_course_search{padding: 0.5em;
 	input[type="search"]{border: none; margin: 0;}
 	button{padding: 0 1em; }
+}
+
+.product_reader_formations{
+	.block-std{margin-bottom: 0;}
+	.product_reader__wrapper{
+		display: grid;
+		gap: 1em;
+		grid-template-areas: 
+		"top"
+		"columns"
+		"body"
+		"bottom" ;
+	}
+	.product_reader__top{grid-area: top; display: flex;gap: 1em;align-items: center;}
+	.product_reader__top__name{flex-grow: 1;}
+	.product_reader__top__buttons{}
+	.product_reader__columns{grid-area: columns;
+		display: grid;
+		gap: 1em;
+		grid-template-areas: "left left left right" ;
+	}
+	.product_reader__left{grid-area: left; display: grid; gap: 1em;}
+	.product_reader__left__blocks{display: flex; gap: 1em; flex-wrap: wrap;}
+	.product_reader__block{display: flex; gap: 1em; align-items: center;font-size: 0.8em; flex-grow: 1; flex-wrap: wrap;
+		.icon{ flex-basis: 0%; flex-grow: 1; min-width: 120px; max-height: 50vw; text-align: center;}
+		.content{flex-basis: 70%; flex-grow: 1;}
+	}
+	.product_reader__goals{}
+	.product_reader__thematique{}
+	.product_reader__right{grid-area: right;}
+	.product_reader__body{grid-area: body;}
+	.product_reader__freecontent{grid-area: bottom}
+	// .product_reader__subreaders{grid-area: bottom}
 }
 
 // .iso_list_product{
