@@ -509,6 +509,11 @@ $breadcrumb--height: 3rem;
 	.ce_rsce_mediacontent &{
 		@include media-max(lg){max-width: 400px; margin-left: auto; margin-right: auto;}
 	}
+	@for $index from 1 through 6 {
+		&[data-maxlines="#{$index}"] .quote{
+			@include multi-ellipsis($font-size: 0.7em, $line-height: body(line-height), $lines-to-show: $index);
+		}
+	}
 }
 
 // LIST ICONS
@@ -1880,13 +1885,6 @@ $heightMain : 1.85em;
 
 // PGM
 // FORMATIONS STYLES
-.fac_theme,
-.fac_tag{
-	--btn-p-y: 0.5em;
-	--btn-p-x: 0.95em;
-	--btn-line-height: 1.2;
-	letter-spacing: 0.15ch; text-transform: uppercase; font-size: 0.8em;
-}
 .formations{
 	--radius-full: 9999px;
 	--radius-md  : 8px;
@@ -2059,6 +2057,22 @@ $heightMain : 1.85em;
 	}
 }
 // formations end
+
+
+.tag{
+	padding: 0.35em 1em; margin: 0; border-radius: var(--radius-full); font-size: 0.85em;
+	         background: var(--theme); 	    color:      var(--theme-font); 
+	&.theme {background: var(--theme); 	    color:      var(--theme-font); @include ellipsis(); font-size: 0.8em; padding: .6em 1em; letter-spacing: 0.15ch; text-transform: uppercase;}
+	&.rating{background: var(--theme-font); color:      var(--theme); white-space: nowrap; flex-shrink: 0;}
+}
+.fac_theme,
+.fac_tag{
+	--btn-p-y: 0.5em;
+	--btn-p-x: 0.95em;
+	--btn-line-height: 1.2;
+	letter-spacing: 0.15ch; text-transform: uppercase; font-size: 0.8em;
+}
+
 
 .mod_iso_productfilterformations{
 	+.mod_iso_productlist{@include block-std();border-radius: 0 0 var(--radius-md) var(--radius-md);}
