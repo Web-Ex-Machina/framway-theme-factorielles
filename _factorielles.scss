@@ -103,7 +103,7 @@ li[data-icon]{padding-left: 0.75em;
 	&:not([class*=ft-]){color: color(white);}
 }
 
-.mod_article{ padding: $spacing*2 0;
+.mod_article{ padding: $spacing*2 0; margin-bottom: 0;
 	// @extend .txt-limit;
   @include media-max(xs){ padding: $spacing 0;}
   >.heroFW:first-child{margin-top: - $spacing*2; 
