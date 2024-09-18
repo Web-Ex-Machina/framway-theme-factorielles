@@ -74,6 +74,18 @@ $(function(){
             $('.filters__pagination .arrow[data-direction=next]').addClass('disabled')
     });
 
+    if ($('.ce_rsce_quoteWnote .more').length) {
+        $('.ce_rsce_quoteWnote .more').each(function(){
+            let quote = $(this).parent().find('.quote');
+            window.addEventListener("resize", function(){
+                quote.removeClass('has-ellipsis');
+                if (quote.get(0).scrollHeight > quote.get(0).clientHeight )
+                    quote.addClass('has-ellipsis')
+            });
+        })
+        window.dispatchEvent(new Event('resize'));
+    }
+
     // FORMATIONS - end
     
 	init();
