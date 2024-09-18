@@ -1,3 +1,7 @@
+require('jssocials');
+require('jssocials/dist/jssocials.css');
+require('jssocials/dist/jssocials-theme-flat.css');
+
 $(function(){
 	$('.print').bind('click', function(){
         window.print();
@@ -16,6 +20,17 @@ $(function(){
             tarteaucitron.userInterface.closePanel();
         },500)
     })
+
+    $(".share-container").jsSocials({
+        shares: [
+            {share: "email", },
+            {share: "linkedin", logo: 'fab fa-linkedin'},
+            {share: "whatsapp", logo: 'fab fa-whatsapp'},
+            {share: "facebook", logo: 'fab fa-facebook'},
+            {share: "twitter",  logo: 'fab fa-twitter'},
+        ],
+        showLabel : false
+    });
 
     if ($('.priceCard.isMain').length) {
         var $mainCard = $('.priceCard.isMain');
