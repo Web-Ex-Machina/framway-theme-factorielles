@@ -15,6 +15,8 @@ module.exports = {
 	'tertiary': 'colors(bittersweet)',
 	'radius': '15px',
 
+	'warning': '#F7AE56',
+
 	'body': {
 		'background': '#FCFCFC',
 		'block-background': 'colors(white)',
