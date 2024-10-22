@@ -21,16 +21,21 @@ $(function(){
         },500)
     })
 
-    $(".share-container").jsSocials({
-        shares: [
-            {share: "email", },
-            {share: "linkedin", logo: 'fab fa-linkedin'},
-            {share: "whatsapp", logo: 'fab fa-whatsapp'},
-            {share: "facebook", logo: 'fab fa-facebook'},
-            {share: "twitter",  logo: 'fab fa-twitter'},
-        ],
-        showLabel : false
-    });
+    $(".share-container").each(function(k,el){
+        let config = {
+            shares: [
+                {share: "email", },
+                {share: "linkedin", logo: 'fab fa-linkedin'},
+                {share: "whatsapp", logo: 'fab fa-whatsapp'},
+                {share: "facebook", logo: 'fab fa-facebook'},
+                {share: "twitter",  logo: 'fab fa-twitter'},
+            ],
+            showLabel : false
+        };
+        if (el.getAttribute('data-url')) config.url   = el.getAttribute('data-url');
+        if (el.getAttribute('data-text')) config.text = el.getAttribute('data-text');
+        $(el).jsSocials(config);
+    })
 
     if ($('.priceCard.isMain').length) {
         var $mainCard = $('.priceCard.isMain');
